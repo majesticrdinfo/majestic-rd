@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <title>Peptides — Majestic R&D</title>
+  <meta name="description" content="Research-grade peptide supply for licensed physicians. USP-797 certified facility. COA-verified. B2B only." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: light only; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #fafaf8; --off: #f4f1ec; --cream: #ede8e0;
+      --gold: #a07840; --gold-light: #c9a46a; --gold-pale: #f0e6d4;
+      --ink: #1a1714; --mid: #4a4540; --muted: #8a837a;
+      --border: rgba(160,120,64,0.15); --border-med: rgba(160,120,64,0.28);
+      --green: #2d6a4f; --green-pale: #f0f7f4;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; }
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity:0.022; pointer-events:none; z-index:999; }
+
+    header { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 56px; height:72px; background:rgba(250,250,248,0.92); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+    .logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
+    .logo-diamond { width:28px; height:28px; border:1.5px solid var(--gold); transform:rotate(45deg); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.3s; }
+    .logo:hover .logo-diamond { background:var(--gold-pale); }
+    .logo-diamond-inner { width:9px; height:9px; background:var(--gold); }
+    .logo-wordmark { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:500; letter-spacing:0.06em; color:var(--ink); }
+    .logo-wordmark span { color:var(--gold); }
+    nav { display:flex; align-items:center; gap:40px; }
+    nav a { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); text-decoration:none; position:relative; transition:color 0.2s; }
+    nav a::after { content:''; position:absolute; bottom:-3px; left:0; right:100%; height:1px; background:var(--gold); transition:right 0.3s ease; }
+    nav a:hover { color:var(--gold); }
+    nav a:hover::after, nav a.active::after { right:0; }
+    nav a.active { color:var(--gold); }
+    .nav-contact { color:var(--gold) !important; border:1px solid var(--border-med); padding:8px 16px; }
+    .nav-contact::after { display:none !important; }
+    .nav-contact:hover { background:var(--gold-pale) !important; }
+
+    .page { padding-top:72px; }
+    .eyebrow { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); display:flex; align-items:center; gap:14px; }
+    .eyebrow::before { content:''; display:block; width:32px; height:1px; background:var(--gold-light); }
+
+    /* HERO */
+    .hero { padding:80px 56px 64px; border-bottom:1px solid var(--border); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:end; background:linear-gradient(135deg,var(--white) 60%,var(--off) 100%); }
+    .hero-left .eyebrow { margin-bottom:20px; }
+    .hero-left h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(48px,5vw,76px); font-weight:400; line-height:1; color:var(--ink); letter-spacing:-0.02em; }
+    .hero-left h1 em { font-style:italic; color:var(--gold); }
+    .hero-right p { font-size:17px; font-weight:300; line-height:1.85; color:var(--mid); margin-bottom:16px; }
+    .compliance-note { padding:16px 20px; border-left:2px solid var(--gold-light); background:var(--gold-pale); margin-top:24px; }
+    .compliance-note p { font-size:13px; color:var(--mid); font-style:italic; margin:0; }
+
+    /* STRIP */
+    .strip { background:var(--ink); padding:18px 56px; display:flex; align-items:center; gap:40px; overflow:hidden; }
+    .strip-item { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(250,250,248,0.35); white-space:nowrap; flex-shrink:0; }
+    .strip-dot { width:3px; height:3px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+
+    /* SHARED */
+    .section-hdr { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:48px; }
+    .section-hdr h2 { font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:400; color:var(--ink); }
+    .section-hdr h2 em { font-style:italic; color:var(--gold); }
+    .section-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); }
+
+    /* COMPOUNDS */
+    .compounds { padding:80px 56px; border-bottom:1px solid var(--border); }
+    .compound-cards { display:flex; flex-direction:column; gap:1px; background:var(--border); border:1px solid var(--border); }
+    .compound-card { background:var(--white); display:grid; grid-template-columns:200px 1fr 1fr 180px; transition:background 0.2s; }
+    .compound-card:hover { background:var(--off); }
+    .cc-name { padding:28px 32px; border-right:1px solid var(--border); }
+    .cc-name-main { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:var(--ink); margin-bottom:4px; }
+    .cc-name-sub { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); }
+    .cc-desc { padding:28px 32px; border-right:1px solid var(--border); }
+    .cc-desc p { font-size:13px; font-weight:300; color:var(--mid); line-height:1.7; }
+    .cc-desc .cite { font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); margin-top:8px; }
+    .cc-specs { padding:28px 32px; border-right:1px solid var(--border); display:flex; flex-direction:column; gap:8px; }
+    .spec-row { display:flex; justify-content:space-between; align-items:center; }
+    .spec-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
+    .spec-val { font-family:'DM Mono',monospace; font-size:11px; font-weight:500; color:var(--ink); }
+    .purity-badge { display:inline-flex; align-items:center; gap:6px; font-family:'DM Mono',monospace; font-size:10px; color:var(--green); }
+    .purity-dot { width:6px; height:6px; border-radius:50%; background:var(--green); }
+    .cc-pricing { padding:28px 32px; text-align:right; }
+    .price-main { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:400; color:var(--ink); }
+    .price-sub { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
+    .inv-flag { display:inline-block; margin-top:8px; font-family:'DM Mono',monospace; font-size:8px; letter-spacing:0.14em; text-transform:uppercase; color:#cc6600; border:1px solid rgba(204,102,0,0.3); padding:3px 8px; background:rgba(204,102,0,0.05); }
+
+    /* QUALITY */
+    .quality { padding:80px 56px; border-bottom:1px solid var(--border); background:var(--off); }
+    .quality-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); }
+    .quality-card { background:var(--white); padding:40px; display:flex; flex-direction:column; gap:12px; transition:background 0.2s; }
+    .quality-card:hover { background:var(--off); }
+    .quality-icon { width:44px; height:44px; border:1px solid var(--border-med); display:flex; align-items:center; justify-content:center; background:var(--gold-pale); margin-bottom:4px; }
+    .quality-icon svg { width:20px; height:20px; stroke:var(--gold); fill:none; stroke-width:1.5; }
+    .quality-card h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:var(--ink); }
+    .quality-card p { font-size:13px; font-weight:300; color:var(--mid); line-height:1.75; }
+    .quality-tag { display:inline-block; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); border:1px solid rgba(45,106,79,0.25); padding:4px 10px; background:var(--green-pale); margin-top:auto; }
+
+    /* LOT VERIFICATION */
+    .lots { padding:80px 56px; border-bottom:1px solid var(--border); }
+    .lot-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+    .lot-card { background:var(--white); padding:32px; display:flex; flex-direction:column; gap:10px; }
+    .lot-card h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:500; color:var(--ink); }
+    .lot-num { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.14em; color:var(--muted); }
+    .lot-purity { font-family:'DM Mono',monospace; font-size:22px; font-weight:500; color:var(--green); }
+    .lot-lab { font-size:12px; font-weight:300; color:var(--mid); }
+    .lot-verify { margin-top:8px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.12em; color:var(--gold); border:1px solid var(--border-med); padding:8px 14px; text-decoration:none; display:inline-block; transition:background 0.2s; }
+    .lot-verify:hover { background:var(--gold-pale); }
+    .lot-key { font-family:'DM Mono',monospace; font-size:9px; color:var(--muted); letter-spacing:0.1em; }
+
+    /* PROGRAM */
+    .program { padding:80px 56px; border-bottom:1px solid var(--border); }
+    .program-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+    .step { background:var(--white); padding:32px 28px; display:flex; flex-direction:column; gap:10px; position:relative; overflow:hidden; }
+    .step::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.4s ease; }
+    .step:hover::before { transform:scaleX(1); }
+    .step-num { font-family:'DM Mono',monospace; font-size:11px; color:var(--gold); letter-spacing:0.2em; }
+    .step h3 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:500; color:var(--ink); }
+    .step p { font-size:13px; font-weight:300; color:var(--mid); line-height:1.7; }
+    .step-flag { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-top:auto; }
+
+    /* FINANCING */
+    .financing { padding:80px 56px; border-bottom:1px solid var(--border); background:var(--off); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .financing h2 { font-family:'Cormorant Garamond',serif; font-size:38px; font-weight:400; color:var(--ink); line-height:1.1; margin-bottom:20px; }
+    .financing h2 em { font-style:italic; color:var(--gold); }
+    .financing p { font-size:15px; font-weight:300; color:var(--mid); line-height:1.85; margin-bottom:12px; }
+    .fin-stats { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); margin-top:32px; }
+    .fin-stat { background:var(--white); padding:24px; }
+    .fin-stat-num { font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:400; color:var(--gold); line-height:1; }
+    .fin-stat-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
+
+    /* METIS */
+    .metis { padding:80px 56px; border-bottom:1px solid var(--border); }
+    .metis-intro { max-width:600px; margin-bottom:48px; }
+    .metis-intro h2 { font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:400; color:var(--ink); margin-bottom:12px; }
+    .metis-intro h2 em { font-style:italic; color:var(--gold); }
+    .metis-intro p { font-size:15px; font-weight:300; color:var(--mid); line-height:1.85; }
+    .metis-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+    .metis-card { background:var(--white); padding:36px; display:flex; flex-direction:column; gap:10px; }
+    .metis-card-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); }
+    .metis-card h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:var(--ink); }
+    .metis-card p { font-size:13px; font-weight:300; color:var(--mid); line-height:1.75; }
+    .metis-items { display:flex; flex-direction:column; gap:6px; margin-top:4px; }
+    .metis-item { font-size:12px; font-weight:300; color:var(--mid); padding-left:14px; position:relative; }
+    .metis-item::before { content:'—'; position:absolute; left:0; color:var(--gold-light); }
+    .metis-tag { display:inline-block; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); border:1px solid var(--border-med); padding:4px 10px; background:var(--gold-pale); margin-top:auto; }
+
+    /* CTA */
+    .cta-section { padding:80px 56px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .cta-section h2 { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:400; color:var(--ink); line-height:1.1; margin-bottom:20px; }
+    .cta-section h2 em { font-style:italic; color:var(--gold); }
+    .cta-section p { font-size:15px; font-weight:300; color:var(--mid); line-height:1.8; }
+    .cta-right { display:flex; flex-direction:column; gap:16px; }
+    .cta-item { padding:24px; border:1px solid var(--border); background:var(--off); display:flex; flex-direction:column; gap:4px; transition:border-color 0.2s; }
+    .cta-item:hover { border-color:var(--gold-light); }
+    .cta-item-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); }
+    .cta-item-value { font-family:'DM Mono',monospace; font-size:14px; color:var(--ink); }
+    .cta-item-value a { color:var(--gold); text-decoration:none; border-bottom:1px solid transparent; transition:border-color 0.2s; }
+    .cta-item-value a:hover { border-color:var(--gold); }
+    .btn { display:inline-block; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--white); background:var(--ink); padding:14px 28px; text-decoration:none; border:1px solid var(--ink); transition:background 0.25s,border-color 0.25s; margin-top:8px; }
+    .btn:hover { background:var(--gold); border-color:var(--gold); }
+
+    /* FOOTER */
+    footer { border-top:1px solid var(--border); padding:40px 56px; display:flex; align-items:center; justify-content:space-between; background:var(--off); }
+    .footer-left { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--muted); }
+    .footer-right { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+    .footer-right a { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.08em; color:var(--gold); text-decoration:none; border-bottom:1px solid transparent; transition:border-color 0.2s; }
+    .footer-right a:hover { border-color:var(--gold); }
+    .footer-note { font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:0.12em; text-transform:uppercase; }
+
+    @media (max-width:900px) {
+      header { padding:0 20px; height:60px; }
+      nav a:not(.nav-contact) { font-size:10px; }
+      .page { padding-top:60px; }
+      .hero, .financing, .cta-section { grid-template-columns:1fr; padding:60px 24px 48px; gap:32px; }
+      .strip { padding:18px 24px; }
+      .compounds, .quality, .lots, .program, .metis { padding:60px 24px; }
+      .compound-card { grid-template-columns:1fr 1fr; }
+      .cc-specs, .cc-pricing { display:none; }
+      .quality-grid, .lot-grid, .metis-grid { grid-template-columns:1fr; }
+      .program-steps { grid-template-columns:1fr 1fr; }
+      footer { flex-direction:column; gap:20px; padding:32px 24px; text-align:center; }
+      .footer-right { align-items:center; }
+    }
+    @media (max-width:600px) {
+      .program-steps, .fin-stats { grid-template-columns:1fr; }
+      .compound-card { grid-template-columns:1fr; }
+      .cc-specs, .cc-pricing { display:flex; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-left.visible{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-right.visible{opacity:1;transform:translateX(0)}
+    .reveal-d1{transition-delay:.12s}.reveal-d2{transition-delay:.24s}.reveal-d3{transition-delay:.36s}.reveal-d4{transition-delay:.48s}
+    /* ── STICKY CTA ── */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--ink);border-top:1px solid rgba(160,120,64,0.35);padding:13px 56px;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta-msg{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:rgba(255,255,255,0.8)}
+    .sticky-cta-msg em{color:var(--gold-light);font-style:italic}
+    .sticky-btns{display:flex;gap:8px;align-items:center;flex-shrink:0}
+    .s-btn-p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:1px solid var(--gold);padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background 0.2s}
+    .s-btn-p:hover{background:var(--gold-light);border-color:var(--gold-light)}
+    .s-btn-s{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,0.4);padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background 0.2s}
+    .s-btn-s:hover{background:rgba(160,120,64,.1)}
+    .s-dismiss{background:none;border:none;color:rgba(255,255,255,.25);font-size:16px;cursor:pointer;padding:4px 6px;line-height:1;margin-left:4px}
+    .s-dismiss:hover{color:rgba(255,255,255,.6)}
+    /* ── MARQUEE ── */
+    .mq-wrap{overflow:hidden;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:11px 0;cursor:default}
+    .mq-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+    .mq-wrap:hover .mq-track{animation-play-state:paused}
+    .mq-item{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 36px;border-right:1px solid rgba(255,255,255,.07);white-space:nowrap}
+    .mq-item.hi{color:var(--gold-light)}
+    @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    /* ── HERO ENTRANCE ── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .h-anim>*{animation:fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) both}
+    .h-anim>*:nth-child(1){animation-delay:.05s}.h-anim>*:nth-child(2){animation-delay:.15s}.h-anim>*:nth-child(3){animation-delay:.25s}.h-anim>*:nth-child(4){animation-delay:.35s}.h-anim>*:nth-child(5){animation-delay:.45s}
+    /* ── PULSE DOT ── */
+    .pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);position:relative;vertical-align:middle;margin-right:6px}
+    .pulse::after{content:'';position:absolute;inset:-3px;border-radius:50%;background:var(--green);opacity:.4;animation:pl 2s ease-out infinite}
+    @keyframes pl{0%{transform:scale(1);opacity:.4}70%{transform:scale(2.2);opacity:0}100%{transform:scale(1);opacity:0}}
+    /* ── COUNT-UP ── */
+    .count-up{font-variant-numeric:tabular-nums}
+    /* ── HOVER LIFT ── */
+    .hover-lift{transition:transform .25s cubic-bezier(0.16,1,0.3,1),box-shadow .25s ease}
+    .hover-lift:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,23,20,.12)}
+
+
+    .faq-section{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .faq-header{margin-bottom:48px}
+    .faq-header .eyebrow{margin-bottom:16px}
+    .faq-header h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--ink)}
+    .faq-header h2 em{font-style:italic;color:var(--gold)}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .faq-item{background:var(--white);padding:0;border:none;cursor:pointer;text-align:left;width:100%;transition:background .2s;display:block}
+    .faq-item:hover{background:var(--cream)}
+    .faq-item.open{background:var(--gold-pale)}
+    .faq-q{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px;font-weight:500;color:var(--ink);line-height:1.45}
+    .faq-icon{font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .3s;line-height:1;display:inline-block}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.22,1,.36,1)}
+    .faq-item.open .faq-a{max-height:600px}
+    .faq-a-inner{padding:0 28px 22px;font-size:13px;font-weight:300;color:var(--mid);line-height:1.8}
+    .faq-a-inner strong{color:var(--ink);font-weight:500}
+    .objection-strip{background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:repeat(3,1fr)}
+    .obj-item{padding:40px 36px;border-right:1px solid rgba(255,255,255,.06)}
+    .obj-item:last-child{border-right:none}
+    .obj-q{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px}
+    .obj-a{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:10px}
+    .obj-detail{font-size:12px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.7}
+    .roi-block{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--ink)}
+    .roi-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);display:flex;align-items:center;gap:14px;margin-bottom:20px}
+    .roi-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold-light)}
+    .roi-block h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--white);margin-bottom:12px}
+    .roi-block h2 em{font-style:italic;color:var(--gold-light)}
+    .roi-block>p{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:580px;line-height:1.85;margin-bottom:48px}
+    .roi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);margin-bottom:20px}
+    .roi-cell{background:rgba(255,255,255,.03);padding:28px 20px;text-align:center}
+    .roi-cell-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px}
+    .roi-cell-val{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:var(--gold-light);line-height:1;margin-bottom:6px}
+    .roi-cell-sub{font-size:11px;font-weight:300;color:rgba(255,255,255,.3);line-height:1.5}
+    .roi-cell.hi .roi-cell-val{color:var(--white);font-size:42px}
+    .roi-note{font-size:11px;font-weight:300;color:rgba(255,255,255,.22);font-style:italic;line-height:1.6}
+    .for-section{padding:72px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .for-section .eyebrow{margin-bottom:16px}
+    .for-section h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);margin-bottom:36px}
+    .for-section h2 em{font-style:italic;color:var(--gold)}
+    .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:24px}
+    .for-card{background:var(--white);padding:28px 24px;transition:background .2s}
+    .for-card:hover{background:var(--gold-pale)}
+    .for-spec{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+    .for-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--ink);margin-bottom:8px}
+    .for-why{font-size:12px;font-weight:300;color:var(--mid);line-height:1.7}
+    .not-for-box{padding:18px 24px;border:1px solid var(--border);background:var(--white);font-size:13px;font-weight:300;color:var(--muted);line-height:1.7}
+    .not-for-box strong{font-weight:500;color:var(--mid)}
+    .urgency-band{padding:18px 56px;background:var(--ink);border-bottom:1px solid rgba(160,120,64,.2);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .urg-left{display:flex;flex-direction:column;gap:3px}
+    .urg-main{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--white)}
+    .urg-main strong{color:var(--gold-light)}
+    .cred-bar{padding:28px 56px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:32px;flex-wrap:wrap;background:var(--white)}
+    .cred-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);flex-shrink:0;white-space:nowrap}
+    .cred-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .cred-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--border-med);color:var(--mid);background:var(--off);white-space:nowrap}
+    .cred-badge.g{border-color:rgba(45,106,79,.3);color:var(--green);background:var(--green-pale)}
+    .testimony-section{padding:72px 56px;border-bottom:1px solid var(--border)}
+    .testimony-section .eyebrow{margin-bottom:16px}
+    .testimony-section h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);margin-bottom:36px}
+    .testimony-section h2 em{font-style:italic;color:var(--gold)}
+    .testimony-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .tc{background:var(--white);padding:32px 28px;display:flex;flex-direction:column;gap:14px;transition:background .2s}
+    .tc:hover{background:var(--off)}
+    .tc-quote{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--ink);line-height:1.6;font-style:italic;flex:1;padding-top:4px}
+    .tc-quote::before{content:'"';color:var(--gold);font-size:36px;line-height:.4;display:block;margin-bottom:10px;font-style:normal}
+    .tc-name{font-size:13px;font-weight:500;color:var(--ink)}
+    .tc-role{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    .tc-disclaimer{font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+    @media(max-width:960px){
+      .faq-grid,.for-grid,.testimony-grid{grid-template-columns:1fr}
+      .objection-strip{grid-template-columns:1fr}
+      .roi-grid{grid-template-columns:1fr 1fr}
+      .obj-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
+      .faq-section,.roi-block,.for-section,.testimony-section,.cred-bar,.urgency-band{padding:48px 24px}
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-diamond"><div class="logo-diamond-inner"></div></div>
+      <div class="logo-wordmark">Majestic <span>R&amp;D</span></div>
+    </a>
+    <nav>
+      <a href="aim.html">AIM</a>
+      <a href="cbg.html">CBG</a>
+      <a href="peptides.html" class="active">Peptides</a>
+      <a href="mailto:majesticrdinfo@gmail.com" class="nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <section class="hero">
+      <div class="hero-left h-anim">
+        <div class="eyebrow"><span class="pulse"></span>Research Supply — Licensed Physicians Only</div>
+        <h1>GLP-1<br><em>Peptide Program</em></h1>
+      </div>
+      <div class="hero-right reveal-right">
+        <p>Research-grade peptide supply for licensed physician practices. USP-797 certified facility, ISO Class 5 sterile environment, third-party COA verification on every lot. B2B only — no patient access, no retail.</p>
+        <p>The program includes compound sourcing, full compliance documentation, program reporting, and PNC financing. Contact us for onboarding timeline details.</p>
+        <div class="compliance-note">
+          <p>All compounds are supplied for licensed physician research use only under RUO designation. Nothing on this page constitutes clinical advice, prescribing guidance, or dosing recommendation. All clinical decisions remain exclusively with the treating physician.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+          <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#fafaf8;background:#1a1714;padding:14px 28px;text-decoration:none;border:1px solid #1a1714;transition:background 0.25s;">Schedule Intro Call →</a>
+          <a href="mailto:majesticrdinfo@gmail.com?subject=Peptide Program Inquiry" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#a07840;background:transparent;padding:14px 28px;text-decoration:none;border:1px solid rgba(160,120,64,0.28);transition:background 0.25s;">Email Us →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="mq-wrap">
+      <div class="mq-track"><span class="mq-item hi">USP-797 Certified Facility</span><span class="mq-item">ISO Class 5 Sterile Environment</span><span class="mq-item">South Carolina</span><span class="mq-item hi">Third-Party COA · Every Lot</span><span class="mq-item">TrustPointe Analytics · Chromate</span><span class="mq-item">99.814% Semaglutide purity</span><span class="mq-item hi">99.845% Tirzepatide purity</span><span class="mq-item">99.822% Retatrutide purity</span><span class="mq-item hi">RUO Designation · B2B Only</span><span class="mq-item">Licensed Physicians Only</span><span class="mq-item">PNC Financing Available</span><span class="mq-item hi">Structured onboarding included</span><span class="mq-item">RUO documentation package included</span><span class="mq-item">Live lab verification · No login</span><span class="mq-item hi">USP-797 Certified Facility</span><span class="mq-item">ISO Class 5 Sterile Environment</span><span class="mq-item">South Carolina</span><span class="mq-item hi">Third-Party COA · Every Lot</span><span class="mq-item">TrustPointe Analytics · Chromate</span><span class="mq-item">99.814% Semaglutide purity</span><span class="mq-item hi">99.845% Tirzepatide purity</span><span class="mq-item">99.822% Retatrutide purity</span><span class="mq-item hi">RUO Designation · B2B Only</span><span class="mq-item">Licensed Physicians Only</span><span class="mq-item">PNC Financing Available</span><span class="mq-item hi">Structured onboarding included</span><span class="mq-item">RUO documentation package included</span><span class="mq-item">Live lab verification · No login</span></div>
+    </div>
+
+
+    <div class="cred-bar reveal">
+      <span class="cred-label">Verified credentials</span>
+      <div class="cred-badges">
+        <span class="cred-badge g">USP-797 Certified</span>
+        <span class="cred-badge g">ISO Class 5 Sterile</span>
+        <span class="cred-badge g">South Carolina Facility</span>
+        <span class="cred-badge">TrustPointe Analytics COA</span>
+        <span class="cred-badge">Chromate COA</span>
+        <span class="cred-badge">99.8% Avg Purity</span>
+        <span class="cred-badge">PNC Financing Available</span>
+        <span class="cred-badge">RUO &middot; B2B Only</span>
+      </div>
+    </div>
+
+    <section class="compounds reveal">
+      <div class="section-hdr">
+        <h2>Current <em>Compound Offering</em></h2>
+        <span class="section-label">Physician inquiry required</span>
+      </div>
+      <div class="compound-cards">
+
+        <div class="compound-card hover-lift">
+          <div class="cc-name"><div class="cc-name-main">Semaglutide</div><div class="cc-name-sub">GLP-1 Agonist</div></div>
+          <div class="cc-desc">
+            <p>INN compound. GLP-1 receptor agonist. Published research across metabolic function, neuroprotection, and neuroinflammation reduction. GLP-1 receptors expressed throughout the CNS. Offered for research and investigational use only under physician responsibility.</p>
+            <div class="cite">Hansen et al. (2015) &nbsp;·&nbsp; Gejl et al. (2016)</div>
+          </div>
+          <div class="cc-specs">
+            <div class="spec-row"><span class="spec-label">Vial</span><span class="spec-val">30 mg</span></div>
+            <div class="spec-row"><span class="spec-label">Per mg</span><span class="spec-val">$8.75</span></div>
+            <div class="spec-row"><span class="spec-label">Purity</span><span class="purity-badge"><span class="purity-dot"></span>99.814%</span></div>
+            <div class="spec-row"><span class="spec-label">Lot</span><span class="spec-val" style="font-size:9px">SiSem042427</span></div>
+          </div>
+          <div class="cc-pricing"><div class="price-main">$262.50</div><div class="price-sub">Per vial · 30 mg</div></div>
+        </div>
+
+        <div class="compound-card hover-lift">
+          <div class="cc-name"><div class="cc-name-main">Tirzepatide</div><div class="cc-name-sub">GLP-1 / GIP Dual Agonist</div></div>
+          <div class="cc-desc">
+            <p>INN compound. GLP-1/GIP dual agonist. GIP receptors expressed in hippocampal and cortical neurons. Published research on neuroprotection-relevant mechanisms and systemic anti-inflammatory effects. Offered for research and investigational use only under physician responsibility.</p>
+            <div class="cite">Samms et al. (2021) &nbsp;·&nbsp; Khera et al. (2023)</div>
+          </div>
+          <div class="cc-specs">
+            <div class="spec-row"><span class="spec-label">Vial</span><span class="spec-val">200 mg</span></div>
+            <div class="spec-row"><span class="spec-label">Per mg</span><span class="spec-val">$3.75</span></div>
+            <div class="spec-row"><span class="spec-label">Purity</span><span class="purity-badge"><span class="purity-dot"></span>99.845%</span></div>
+            <div class="spec-row"><span class="spec-label">Lot</span><span class="spec-val" style="font-size:9px">BWiTir091227</span></div>
+          </div>
+          <div class="cc-pricing"><div class="price-main">$750.00</div><div class="price-sub">Per vial · 200 mg</div></div>
+        </div>
+
+        <div class="compound-card hover-lift">
+          <div class="cc-name"><div class="cc-name-main">Retatrutide</div><div class="cc-name-sub">Triple Agonist</div></div>
+          <div class="cc-desc">
+            <p>INN compound. Triple GIP/GLP-1/Glucagon receptor agonist. Offered for research and investigational use only under physician responsibility.</p>
+            <div class="cite">Coskun et al. (2022) &nbsp;·&nbsp; Jastreboff et al. (2023)</div>
+          </div>
+          <div class="cc-specs">
+            <div class="spec-row"><span class="spec-label">Vial</span><span class="spec-val">60 mg</span></div>
+            <div class="spec-row"><span class="spec-label">Per mg</span><span class="spec-val">$8.75</span></div>
+            <div class="spec-row"><span class="spec-label">Purity</span><span class="purity-badge"><span class="purity-dot"></span>99.822%</span></div>
+            <div class="spec-row"><span class="spec-label">Lot</span><span class="spec-val" style="font-size:9px">CoRet081427</span></div>
+          </div>
+          <div class="cc-pricing"><div class="price-main">$525.00</div><div class="price-sub">Per vial · 60 mg</div><div class="inv-flag">Investigational</div></div>
+        </div>
+
+        <div class="compound-card hover-lift">
+          <div class="cc-name"><div class="cc-name-main">Expanding</div><div class="cc-name-sub">Q3–Q4 2026</div></div>
+          <div class="cc-desc">
+            <p>Additional research-grade compounds being added to inventory through Q3–Q4 2026. Pricing subject to volume. Physician inquiries welcome for early access discussion.</p>
+          </div>
+          <div class="cc-specs">
+            <div class="spec-row"><span class="spec-label">Timeline</span><span class="spec-val">Q3–Q4 2026</span></div>
+          </div>
+          <div class="cc-pricing"><div class="price-main" style="font-size:18px;margin-top:6px">Coming</div><div class="price-sub">Inquiry for early access</div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="quality reveal">
+      <div class="section-hdr">
+        <h2>Quality &amp; <em>Compliance</em></h2>
+        <span class="section-label">Every lot. Every order.</span>
+      </div>
+      <div class="quality-grid">
+
+        <div class="quality-card hover-lift">
+          <div class="quality-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3>USP-797 Certified Facility</h3>
+          <p>Manufactured in an ISO Class 5 sterile environment in South Carolina. Laminar airflow hoods, injectable-grade preparation standards. Lab visits available and encouraged — open door policy.</p>
+          <div class="quality-tag">South Carolina &nbsp;·&nbsp; ISO Class 5</div>
+        </div>
+
+        <div class="quality-card hover-lift">
+          <div class="quality-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Third-Party COA Verification</h3>
+          <p>Every lot tested by TrustPointe Analytics (Dorr, MI) or Chromate. COA confirms identity, purity, and quantity. QR code links directly to the issuing lab's portal — not to us. Purity consistently 99.75–99.85%.</p>
+          <div class="quality-tag">TrustPointe &nbsp;·&nbsp; Chromate &nbsp;·&nbsp; Live Verification</div>
+        </div>
+
+        <div class="quality-card hover-lift">
+          <div class="quality-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h3>RUO Documentation Package</h3>
+          <p>Included with every starter package: lot tracking logs, adverse event documentation forms, RUO procurement records, and regulatory reference materials. Ready before your first order arrives.</p>
+          <div class="quality-tag">Included with Starter Order</div>
+        </div>
+
+        <div class="quality-card hover-lift">
+          <div class="quality-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <h3>RUO Designation</h3>
+          <p>All compounds supplied under Research Use Only designation, B2B to licensed physician practices. The physician determines use within their professional license and scope of practice. Majestic R&D makes no clinical direction or recommendation.</p>
+          <div class="quality-tag">B2B &nbsp;·&nbsp; Licensed Physicians Only</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MID-PAGE CTA: quality proven, now act -->
+    <div style="padding:40px 56px;background:#1a1714;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(201,164,106,0.7);margin-bottom:6px;">USP-797 · ISO Class 5 · 99.8% avg purity · 3rd-party verified</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fafaf8;">15-minute call. No commitment. Free practice analysis.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#1a1714;background:#a07840;border:1px solid #a07840;padding:12px 22px;text-decoration:none;white-space:nowrap;">Schedule Intro Call →</a>
+        <a href="mailto:majesticrdinfo@gmail.com?subject=Peptide Program Inquiry" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#c9a46a;border:1px solid rgba(201,164,106,0.35);padding:12px 22px;text-decoration:none;white-space:nowrap;">Email Inquiry →</a>
+      </div>
+    </div>
+
+    <section class="lots reveal">
+      <div class="section-hdr">
+        <h2>Verify Current <em>Lots</em></h2>
+        <span class="section-label">Live lab verification — no login required</span>
+      </div>
+      <div class="lot-grid">
+
+        <div class="lot-card hover-lift">
+          <h4>Semaglutide</h4>
+          <div class="lot-num">LOT SiSem042427</div>
+          <div class="lot-purity">99.814%</div>
+          <div class="lot-lab">Tested by Chromate &nbsp;·&nbsp; COA #26057</div>
+          <a href="https://chromate.org/verify" target="_blank" rel="noopener" class="lot-verify">Verify at Chromate.org →</a>
+          <div class="lot-key">Access code: SHC1DAA4EK92</div>
+        </div>
+
+        <div class="lot-card hover-lift">
+          <h4>Tirzepatide</h4>
+          <div class="lot-num">LOT BWiTir091227</div>
+          <div class="lot-purity">99.845%</div>
+          <div class="lot-lab">Tested by TrustPointe Analytics</div>
+          <a href="https://trustpointelims.com" target="_blank" rel="noopener" class="lot-verify">Verify at TrustPointeLIMS.com →</a>
+          <div class="lot-key">Key: LCVKATII070C</div>
+        </div>
+
+        <div class="lot-card hover-lift">
+          <h4>Retatrutide</h4>
+          <div class="lot-num">LOT CoRet081427</div>
+          <div class="lot-purity">99.822%</div>
+          <div class="lot-lab">Tested by TrustPointe Analytics</div>
+          <a href="https://trustpointelims.com" target="_blank" rel="noopener" class="lot-verify">Verify at TrustPointeLIMS.com →</a>
+          <div class="lot-key">Key: HUPO1PBP1AB0</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOTS-TO-PROGRAM BRIDGE -->
+    <div style="padding:32px 56px;background:#f4f1ec;border-bottom:1px solid rgba(160,120,64,0.15);display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#8a837a;">Every lot independently verified and publicly accessible.</div>
+      <div style="flex:1;min-width:200px;font-size:13px;font-weight:300;color:#4a4540;">Satisfied with purity documentation? The next step is a 15-minute program overview call — no commitment, no pitch deck.</div>
+      <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#a07840;border:1px solid rgba(160,120,64,0.28);padding:10px 18px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Book 15-Min Call →</a>
+    </div>
+
+
+    <!-- PROGRAM ELIGIBILITY -->
+    <section class="for-section reveal">
+      <div class="eyebrow">Program Eligibility</div>
+      <h2>Who this program is <em>designed for.</em></h2>
+      <div class="for-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="for-card hover-lift">
+          <div class="for-spec">Eligible Practices</div>
+          <div class="for-title">Licensed physician practices</div>
+          <div class="for-why">B2B supply enrollment is open to licensed physicians, DOs, NPs, and PAs with an active professional license. License verification required on file prior to first order.</div>
+        </div>
+        <div class="for-card hover-lift">
+          <div class="for-spec">Supply Scope</div>
+          <div class="for-title">RUO procurement only</div>
+          <div class="for-why">All compounds are supplied under Research Use Only designation directly to licensed practices. B2B only — no patient-direct supply, no retail. Physician determines all clinical application under their professional license.</div>
+        </div>
+      </div>
+      <div class="not-for-box"><strong>Not eligible:</strong> Practices without a licensed physician, DO, NP, or PA with an active professional license on file. Retail or direct-to-consumer procurement is not available under any circumstance.</div>
+    </section>
+
+    <section class="program reveal">
+      <div class="section-hdr">
+        <h2>From Inquiry to <em>First Order</em></h2>
+        <span class="section-label">Structured onboarding</span>
+      </div>
+      <div class="program-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Intro Call</h3>
+          <p>15 minutes. We walk through the program: compound sourcing, supply terms, compliance documentation, and financing options. No commitment required.</p>
+          <div class="step-flag">No commitment required</div>
+          <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#a07840;border:1px solid rgba(160,120,64,0.3);padding:9px 16px;text-decoration:none;background:#fafaf8;">Book Now →</a>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Financing</h3>
+          <p>One-page PNC application. $30,000 starter order at 10% APR over 5 years — approximately $650/month. No personal credit check. No collateral. Approval in approximately one week.</p>
+          <div class="step-flag">$0 out of pocket</div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Inventory Ships</h3>
+          <p>Ships from South Carolina within 5–7 days of funding. Full compliance documentation included. Two 2-hour training sessions with your program contact.</p>
+          <div class="step-flag">5–7 days from funding</div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>First Order</h3>
+          <p>Inventory in hand, compliance documentation complete, two training sessions scheduled. Program structured for operational readiness from day one.</p>
+          <div class="step-flag">Operational from day one</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="financing reveal">
+      <div>
+        <h2>$0 out of pocket. <em>PNC-financed.</em></h2>
+        <p>Starter inventory is financed through PNC — one of the largest banks in the US and a trusted partner for physician practice financing nationwide. Terms structured for program-scale procurement, not personal lending.</p>
+        <p>No personal credit check. No collateral. One-page application. Approval in approximately one week.</p>
+      </div>
+      <div>
+        <div class="fin-stats">
+          <div class="fin-stat"><div class="fin-stat-num">$30K</div><div class="fin-stat-label">Starter order size</div></div>
+          <div class="fin-stat"><div class="fin-stat-num">~$650</div><div class="fin-stat-label">Monthly payment (est.)</div></div>
+          <div class="fin-stat"><div class="fin-stat-num">10%</div><div class="fin-stat-label">APR over 5 years</div></div>
+          <div class="fin-stat"><div class="fin-stat-num">1 page</div><div class="fin-stat-label">Application</div></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OBJECTIONS -->
+    <div class="objection-strip reveal">
+      <div class="obj-item">
+        <div class="obj-q">Most common objection</div>
+        <div class="obj-a">&ldquo;I&rsquo;m worried about the regulatory exposure.&rdquo;</div>
+        <div class="obj-detail">All compounds are supplied B2B under RUO (Research Use Only) designation directly to your licensed practice. You determine use under your professional license. We supply compound &mdash; not clinical direction. Same model as any B2B research supply relationship.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Second most common</div>
+        <div class="obj-a">&ldquo;I don&rsquo;t have the cash to get started.&rdquo;</div>
+        <div class="obj-detail">$0 required. PNC financing covers your entire $30,000 starter inventory. One-page application, no personal credit check, no collateral. ~$650/month. Financing terms are structured around typical physician practice economics.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Third most common</div>
+        <div class="obj-a">&ldquo;How do I know the purity is real?&rdquo;</div>
+        <div class="obj-detail">You verify it yourself. Every lot COA includes a QR code that links directly to the issuing lab&rsquo;s portal &mdash; TrustPointe Analytics or Chromate. You&rsquo;re not trusting our numbers. You&rsquo;re reading the independent lab&rsquo;s own results. Current lots: 99.814%, 99.845%, 99.822%.</div>
+      </div>
+    </div>
+
+    <section class="metis reveal">
+      <div class="metis-intro">
+        <div class="eyebrow" style="margin-bottom:16px">Research Program Dashboard</div>
+        <h2>Metis Program Intelligence — <em>included.</em></h2>
+        <p>Every enrolled physician receives Metis research program reporting at no additional cost. Delivered in partnership with Metis Consulting — program-level data and documentation support for physician practices in the research supply space.</p>
+      </div>
+      <div class="metis-grid">
+
+        <div class="metis-card hover-lift">
+          <div class="metis-card-label">Pre-Enrollment</div>
+          <h3>Program Overview Report</h3>
+          <p>A program-level summary built before any commitment is required. Covers supply terms, procurement structure, and program economics at your scale.</p>
+          <div class="metis-items">
+            <div class="metis-item">Program supply terms and procurement structure</div>
+            <div class="metis-item">Program economics overview for your scale</div>
+            <div class="metis-item">Financing terms and order structure</div>
+          </div>
+          <div class="metis-tag">No commitment required</div>
+        </div>
+
+        <div class="metis-card hover-lift">
+          <div class="metis-card-label">On First Order</div>
+          <h3>Research Program Dashboard</h3>
+          <p>An interactive dashboard activates on your first order. Tracks order history, lot documentation, and program activity. Complimentary for 90 days.</p>
+          <div class="metis-items">
+            <div class="metis-item">Order and reorder history</div>
+            <div class="metis-item">Lot documentation and COA reference</div>
+            <div class="metis-item">Program activity summary</div>
+          </div>
+          <div class="metis-tag">Complimentary 90 days</div>
+        </div>
+
+        <div class="metis-card hover-lift">
+          <div class="metis-card-label">At Activation</div>
+          <h3>Program Onboarding Checklist</h3>
+          <p>Structured activation checklist delivered at program start. Covers documentation, supply setup, and program readiness across key dimensions.</p>
+          <div class="metis-items">
+            <div class="metis-item">Documentation readiness review</div>
+            <div class="metis-item">Supply and order setup confirmation</div>
+            <div class="metis-item">Program-specific, not generic templates</div>
+          </div>
+          <div class="metis-tag">Delivered at activation</div>
+        </div>
+
+        <div class="metis-card hover-lift">
+          <div class="metis-card-label">At Activation</div>
+          <h3>Program Summary Report</h3>
+          <p>A program-level summary delivered at activation: supply status, documentation on file, and program readiness observations.</p>
+          <div class="metis-items">
+            <div class="metis-item">Supply and documentation status</div>
+            <div class="metis-item">Program readiness observations</div>
+            <div class="metis-item">Built from your enrollment data</div>
+          </div>
+          <div class="metis-tag">Delivered within 30 days</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq-section reveal" id="faq">
+      <div class="faq-header">
+        <div class="eyebrow">Common Questions</div>
+        <h2>Questions physicians ask <em>before they commit.</em></h2>
+      </div>
+      <div class="faq-grid">
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is this legal? How does RUO supply work for my practice?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Compounds are supplied B2B under RUO (Research Use Only) designation to your licensed practice. You determine use under your professional license and scope of practice. This is the same B2B research supply model used across the industry. We do not supply patients directly &mdash; ever.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What happens if FDA restricts compounded semaglutide again?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">We supply Tirzepatide and Retatrutide in addition to Semaglutide, providing compound diversity. Our program is structured so you build a sustainable supply relationship across multiple compounds, not dependence on a single molecule.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How long until my practice is operational with the program?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Conservatively: intro call week 1, PNC financing approval ~week 2, inventory ships within 5&ndash;7 days of funding, training sessions ~week 3&ndash;4. Program fully operational within 4&ndash;6 weeks of your first call. Your practice economics analysis is built on your specific specialty and operational profile before you start.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What&rsquo;s included in the compliance documentation?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Lot tracking logs, adverse event documentation forms, RUO procurement records, and regulatory reference materials. Full package included with your starter order. Two 2-hour training sessions with your program contact are also included.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Can I verify the COA myself before ordering?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Current lot numbers and verification links are published on our peptides page. TrustPointe Analytics and Chromate both have independent portals where you can verify identity, purity, and quantity using the access codes we provide. No account required.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What is PNC financing and is it guaranteed?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">PNC is one of the largest banks in the US, with a dedicated physician practice financing program. The $30,000 starter order is financed at 10% APR over 5 years (~$650/month). Approval is not guaranteed &mdash; it is subject to PNC&rsquo;s underwriting. No personal credit check and no collateral are required. Approval typically takes approximately one week.</div></div>
+        </button>
+      </div>
+    </section>
+
+
+    <div class="urgency-band">
+      <div class="urg-left">
+        <div class="urg-main">Currently onboarding licensed physician practices.</div>
+        <div class="urg-sub">Free practice analysis &middot; No commitment &middot; 15-minute call &middot; Response within 1 business day</div>
+      </div>
+      <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="s-btn-p">Book Your Call &rarr;</a>
+    </div>
+
+    <section class="cta-section reveal">
+      <div>
+        <h2>15 minutes. Free practice analysis. <em>No commitment.</em></h2>
+        <p>15 minutes. No commitment required. We walk through the program structure, sourcing terms, compliance documentation, and financing options — and send you a program summary before any decision is made.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+          <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="btn">Schedule Intro Call →</a>
+          <a href="mailto:majesticrdinfo@gmail.com?subject=Peptide Program — Practice Inquiry" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#a07840;background:transparent;padding:14px 28px;text-decoration:none;border:1px solid rgba(160,120,64,0.28);transition:background 0.25s;margin-top:8px;">Email Inquiry →</a>
+        </div>
+      </div>
+      <div class="cta-right">
+        <div class="cta-item">
+          <div class="cta-item-label">Physician Inquiries</div>
+          <div class="cta-item-value"><a href="mailto:majesticrdinfo@gmail.com">majesticrdinfo@gmail.com</a></div>
+        </div>
+        <div class="cta-item">
+          <div class="cta-item-label">Access</div>
+          <div class="cta-item-value">Licensed physicians only</div>
+        </div>
+        <div class="cta-item">
+          <div class="cta-item-label">Response Time</div>
+          <div class="cta-item-value">Within 2 business days</div>
+        </div>
+        <div class="cta-item">
+          <div class="cta-item-label">Practice Analysis</div>
+          <div class="cta-item-value">Free — delivered within 48 hours of inquiry</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">&copy; 2026 Majestic R&D, LLC. All rights reserved.</div>
+    <div class="footer-right">
+      <a href="mailto:majesticrdinfo@gmail.com">majesticrdinfo@gmail.com</a>
+      <div class="footer-note">Licensed Physician Access Only &nbsp;·&nbsp; RUO</div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-cta-msg">15-minute call. No commitment. <em>Free practice analysis.</em></div>
+    <div class="sticky-btns">
+      <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="s-btn-p">Schedule Intro Call &rarr;</a>
+      <a href="mailto:majesticrdinfo@gmail.com?subject=Peptide Program Inquiry" class="s-btn-s">Email Inquiry &rarr;</a>
+      <button class="s-dismiss" id="s-dismiss" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // Scroll reveal
+      const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.22,rootMargin:'0px 0px -160px 0px'});
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+      // Sticky CTA
+      const sc=document.getElementById('sticky-cta');
+      if(sc){let dismissed=false;window.addEventListener('scroll',()=>{if(!dismissed)sc.classList.toggle('show',window.scrollY>window.innerHeight*.75);},{passive:true});const sd=document.getElementById('s-dismiss');if(sd)sd.addEventListener('click',()=>{dismissed=true;sc.classList.remove('show');});}
+      // Count-up
+      function countUp(el){const t=parseFloat(el.dataset.t),pre=el.dataset.pre||'',suf=el.dataset.suf||'',dec=+(el.dataset.dec||0),dur=1400,s=performance.now(),ease=p=>1-Math.pow(1-p,3);(function fr(n){const p=Math.min((n-s)/dur,1);el.textContent=pre+(t*ease(p)).toFixed(dec)+suf;p<1&&requestAnimationFrame(fr);})(s);}
+      const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done=1;countUp(e.target);}}),{threshold:.5});
+      document.querySelectorAll('.count-up').forEach(el=>co.observe(el));
+      // Active nav
+      const secs=document.querySelectorAll('section[id]'),navs=document.querySelectorAll('nav a');
+      window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});navs.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active');});},{passive:true});
+
+    function toggleFaq(el){var was=el.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)el.classList.add('open');}
+
+    })();
+  </script>
+</body>
+</html>

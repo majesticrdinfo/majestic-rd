@@ -1,0 +1,11 @@
+# Majestic R&D — Cloudflare Pages Redirects
+# Clean URL rewrites (removes .html extension from browser bar)
+/aim              /aim.html             200
+/peptides         /peptides.html        200
+/cbg              /cbg.html             200
+
+# Redirect old domain / old branding if needed
+# /old-path        /new-path             301
+
+# 404 fallback
+/*               /index.html            404

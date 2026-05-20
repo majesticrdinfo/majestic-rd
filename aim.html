@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIM Therapeutix — Majestic R&D</title>
+  <meta name="description" content="AIM is a non-injectable intranasal delivery vehicle supplied to licensed physicians. Non-sterile classification. No USP-797 required. Physician-controlled." />
+  <meta name="color-scheme" content="light only" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE127Y9MQC"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EE127Y9MQC');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: light only; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white:     #fafaf8;
+      --off:       #f4f1ec;
+      --cream:     #ede8e0;
+      --gold:      #a07840;
+      --gold-light:#c9a46a;
+      --gold-pale: #f0e6d4;
+      --ink:       #1a1714;
+      --mid:       #4a4540;
+      --muted:     #8a837a;
+      --border:    rgba(160,120,64,0.15);
+      --border-med:rgba(160,120,64,0.28);
+      --shadow:    0 2px 24px rgba(26,23,20,0.07);
+      --shadow-lg: 0 8px 48px rgba(26,23,20,0.11);
+      --green:     #2d6a4f;
+      --green-pale:#e8f5f0;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.022; pointer-events: none; z-index: 999; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 72px; background: rgba(250,250,248,0.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-diamond { width: 28px; height: 28px; border: 1.5px solid var(--gold); transform: rotate(45deg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.3s; }
+    .logo:hover .logo-diamond { background: var(--gold-pale); }
+    .logo-diamond-inner { width: 9px; height: 9px; background: var(--gold); }
+    .logo-wordmark { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; letter-spacing: 0.06em; color: var(--ink); line-height: 1; }
+    .logo-wordmark span { color: var(--gold); }
+    nav { display: flex; align-items: center; gap: 36px; }
+    nav a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-decoration: none; position: relative; transition: color 0.2s; }
+    nav a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right 0.3s ease; }
+    nav a:hover { color: var(--gold); }
+    nav a:hover::after, nav a.active::after { right: 0; }
+    nav a.active { color: var(--gold); }
+    .nav-contact { color: var(--gold) !important; border: 1px solid var(--border-med); padding: 8px 16px; transition: background 0.2s !important; }
+    .nav-contact::after { display: none !important; }
+    .nav-contact:hover { background: var(--gold-pale) !important; }
+
+    .page { padding-top: 72px; }
+
+    /* ── HERO ── */
+    .page-hero { padding: 80px 56px 72px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; background: linear-gradient(135deg, var(--white) 55%, var(--off) 100%); }
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold-light); }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 5.5vw, 84px); font-weight: 400; line-height: 0.95; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 28px; }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+    .hero-badge { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--border-med); color: var(--mid); background: var(--white); }
+    .hero-badge.green { border-color: rgba(45,106,79,0.3); color: var(--green); background: var(--green-pale); }
+    .page-hero-right p { font-size: 16px; font-weight: 300; line-height: 1.9; color: var(--mid); margin-bottom: 14px; }
+    .compliance-box { margin-top: 28px; padding: 20px 24px; border-left: 3px solid var(--gold-light); background: var(--gold-pale); }
+    .compliance-box p { font-size: 13px !important; color: var(--mid) !important; font-style: italic; margin: 0 !important; line-height: 1.7 !important; }
+    .compliance-box strong { font-style: normal; color: var(--ink); }
+
+    /* ── COMPLIANCE STRIP ── */
+    .compliance-strip { background: var(--ink); padding: 28px 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; }
+    .cs-item { padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.08); }
+    .cs-item:last-child { border-right: none; }
+    .cs-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+    .cs-value { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--gold-light); line-height: 1.2; }
+
+    /* ── SECTION SHARED ── */
+    .eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 14px; }
+    .eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold-light); }
+
+    /* ── MECHANISM ── */
+    .mechanism { padding: 80px 56px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .mechanism-left .eyebrow { margin-bottom: 20px; }
+    .mechanism-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; color: var(--ink); line-height: 1.1; margin-bottom: 20px; }
+    .mechanism-left h2 em { font-style: italic; color: var(--gold); }
+    .mechanism-left p { font-size: 15px; font-weight: 300; color: var(--mid); line-height: 1.85; margin-bottom: 12px; }
+    .mechanism-right { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .mechanism-row { display: grid; grid-template-columns: 2fr 3fr; background: var(--white); transition: background 0.2s; }
+    .mechanism-row:hover { background: var(--off); }
+    .mrow-label { padding: 18px 24px; border-right: 1px solid var(--border); font-size: 13px; font-weight: 500; color: var(--ink); }
+    .mrow-value { padding: 18px 24px; font-size: 13px; font-weight: 300; color: var(--mid); line-height: 1.7; }
+    .mrow-value.highlight { color: var(--green); font-weight: 400; }
+
+    /* ── COMPLIANCE DEEP DIVE ── */
+    .compliance-section { padding: 80px 56px; border-bottom: 1px solid var(--border); background: var(--off); }
+    .compliance-section .eyebrow { margin-bottom: 20px; }
+    .compliance-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; color: var(--ink); margin-bottom: 16px; }
+    .compliance-section h2 em { font-style: italic; color: var(--gold); }
+    .compliance-section > p { font-size: 15px; font-weight: 300; color: var(--mid); line-height: 1.85; max-width: 640px; margin-bottom: 48px; }
+    .compliance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-med); border: 1px solid var(--border-med); }
+    .compliance-card { background: var(--white); padding: 36px 28px; }
+    .compliance-card-icon { font-family: 'DM Mono', monospace; font-size: 22px; color: var(--gold); margin-bottom: 16px; }
+    .compliance-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+    .compliance-card p { font-size: 13px; font-weight: 300; color: var(--mid); line-height: 1.75; }
+    .compliance-card .legal-note { margin-top: 14px; padding: 10px 14px; background: var(--green-pale); border-left: 2px solid rgba(45,106,79,0.4); font-size: 12px; color: var(--green); font-style: italic; }
+
+    /* ── COMPARISON ── */
+    .comparison { padding: 80px 56px; border-bottom: 1px solid var(--border); }
+    .comparison-header { margin-bottom: 48px; }
+    .comparison-header .eyebrow { margin-bottom: 16px; }
+    .comparison-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: var(--ink); }
+    .comparison-header h2 em { font-style: italic; color: var(--gold); }
+    .comparison-table { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--border); }
+    .comparison-table th { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 20px; text-align: left; border-bottom: 2px solid var(--border-med); color: var(--muted); }
+    .comparison-table th:first-child { color: var(--ink); background: var(--off); width: 30%; }
+    .comparison-table th:nth-child(2) { width: 35%; }
+    .comparison-table th:nth-child(3) { color: var(--gold); background: var(--gold-pale); width: 35%; }
+    .comparison-table td { padding: 16px 20px; font-size: 13px; font-weight: 300; color: var(--mid); border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.6; }
+    .comparison-table td:first-child { font-weight: 500; color: var(--ink); background: var(--off); font-size: 12px; }
+    .comparison-table td:nth-child(3) { background: rgba(160,120,64,0.04); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .check { color: var(--green); font-weight: 500; }
+    .cross { color: #b04040; }
+
+    /* ── ECONOMICS SECTION ── */
+    .economics { padding: 80px 56px; border-bottom: 1px solid var(--border); background: var(--ink); }
+    .economics .eyebrow { margin-bottom: 20px; }
+    .economics .eyebrow { color: var(--gold-light) !important; }
+    .economics .eyebrow::before { background: var(--gold-light) !important; }
+    .economics h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; color: var(--white); margin-bottom: 14px; }
+    .economics h2 em { font-style: italic; color: var(--gold-light); }
+    .economics > p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.85; max-width: 560px; margin-bottom: 48px; }
+    .econ-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06); margin-bottom: 48px; }
+    .econ-card { background: rgba(255,255,255,0.03); padding: 36px 28px; }
+    .econ-card-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px; }
+    .econ-card-value { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .econ-card-sub { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .pricing-table { width: 100%; border-collapse: collapse; border: 1px solid rgba(255,255,255,0.08); }
+    .pricing-table th { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; padding: 14px 20px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.04); }
+    .pricing-table td { padding: 14px 20px; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.65); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .pricing-table td:first-child { font-weight: 500; color: var(--white); }
+    .pricing-table td.gold { color: var(--gold-light); font-weight: 400; }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .pricing-table tr.featured { background: rgba(160,120,64,0.07); }
+    .pricing-note { margin-top: 24px; font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.35); font-style: italic; }
+
+    /* ── COMPOUNDS ── */
+    .compounds { padding: 80px 56px; border-bottom: 1px solid var(--border); }
+    .compounds-header { margin-bottom: 48px; }
+    .compounds-header .eyebrow { margin-bottom: 16px; }
+    .compounds-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 12px; }
+    .compounds-header h2 em { font-style: italic; color: var(--gold); }
+    .compounds-header p { font-size: 14px; font-weight: 300; color: var(--mid); line-height: 1.8; max-width: 560px; }
+    .compounds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .compound-card { background: var(--white); padding: 28px 24px; transition: background 0.2s; position: relative; }
+    .compound-card:hover { background: var(--off); }
+    .compound-card-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+    .compound-card-sub { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .compound-card-obs { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.65; }
+    .compound-flag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border-med); padding: 3px 8px; margin-top: 10px; }
+
+    /* ── WORKFLOW CTA ── */
+    .workflow-cta { padding: 80px 56px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; background: var(--off); }
+    .workflow-cta .eyebrow { margin-bottom: 20px; }
+    .workflow-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 16px; }
+    .workflow-cta h2 em { font-style: italic; color: var(--gold); }
+    .workflow-cta p { font-size: 15px; font-weight: 300; color: var(--mid); line-height: 1.85; margin-bottom: 12px; }
+    .cta-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); background: var(--ink); padding: 16px 28px; text-decoration: none; border: 1px solid var(--ink); transition: background 0.25s, border-color 0.25s; width: fit-content; }
+    .btn-primary:hover { background: var(--gold); border-color: var(--gold); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); background: transparent; padding: 16px 28px; text-decoration: none; border: 1px solid var(--border-med); transition: background 0.25s; width: fit-content; }
+    .btn-secondary:hover { background: var(--gold-pale); }
+    .workflow-steps { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .wf-step { background: var(--white); padding: 20px 24px; display: grid; grid-template-columns: 36px 1fr; gap: 16px; align-items: start; }
+    .wf-num { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--gold-light); }
+    .wf-text h4 { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+    .wf-text p { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.65; }
+
+    /* ── ORDERING ── */
+    .ordering { padding: 80px 56px; border-bottom: 1px solid var(--border); }
+    .ordering .eyebrow { margin-bottom: 20px; }
+    .ordering h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; color: var(--ink); margin-bottom: 14px; }
+    .ordering h2 em { font-style: italic; color: var(--gold); }
+    .ordering > p { font-size: 15px; font-weight: 300; color: var(--mid); line-height: 1.85; max-width: 600px; margin-bottom: 48px; }
+    .order-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 40px; }
+    .order-card { background: var(--white); padding: 32px 28px; transition: background 0.2s; position: relative; }
+    .order-card:hover { background: var(--off); }
+    .order-card.featured { background: var(--gold-pale); border: 2px solid var(--gold-light); }
+    .order-card.featured:hover { background: #e8d9c4; }
+    .order-badge { position: absolute; top: -1px; right: 24px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--white); padding: 4px 12px; }
+    .order-card-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .order-card-name { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+    .order-card-doses { font-size: 13px; font-weight: 300; color: var(--mid); margin-bottom: 20px; }
+    .order-price { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; color: var(--ink); line-height: 1; margin-bottom: 4px; }
+    .order-price span { font-size: 16px; }
+    .order-per { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+    .order-divider { height: 1px; background: var(--border-med); margin: 20px 0; }
+    .order-detail { font-size: 12px; font-weight: 300; color: var(--mid); line-height: 1.7; margin-bottom: 6px; }
+    .order-detail strong { font-weight: 500; color: var(--ink); }
+    .order-cta { display: block; margin-top: 24px; text-align: center; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--border-med); padding: 12px; text-decoration: none; transition: background 0.2s; }
+    .order-cta:hover { background: var(--cream); }
+    .ordering-note { padding: 24px 28px; border-left: 3px solid var(--gold-light); background: var(--gold-pale); }
+    .ordering-note p { font-size: 13px; font-weight: 300; color: var(--mid); line-height: 1.75; font-style: italic; }
+    .ordering-note strong { font-style: normal; color: var(--ink); }
+
+    /* ── RESEARCH MATERIALS ── */
+    .research-materials { padding: 80px 56px; border-bottom: 1px solid var(--border); background: var(--ink); }
+    .research-materials .eyebrow { color: var(--gold-light) !important; margin-bottom: 20px; }
+    .research-materials .eyebrow::before { background: var(--gold-light) !important; }
+    .research-materials h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; color: var(--white); margin-bottom: 14px; }
+    .research-materials h2 em { font-style: italic; color: var(--gold-light); }
+    .research-materials > p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.85; max-width: 620px; margin-bottom: 56px; }
+    .rm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.07); }
+    .rm-card { background: rgba(255,255,255,0.03); padding: 40px 36px; display: flex; flex-direction: column; }
+    .rm-card-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
+    .rm-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--white); margin-bottom: 8px; line-height: 1.1; }
+    .rm-card p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 8px; flex: 1; }
+    .rm-card-contents { margin: 20px 0 28px; display: flex; flex-direction: column; gap: 6px; }
+    .rm-card-contents span { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.45); padding-left: 14px; position: relative; }
+    .rm-card-contents span::before { content: '→'; position: absolute; left: 0; color: var(--gold-light); font-size: 10px; }
+    /* Gate form */
+    .rm-gate { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; }
+    .rm-gate-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+    .rm-form { display: flex; flex-direction: column; gap: 8px; }
+    .rm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .rm-input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--white); padding: 11px 14px; font-size: 12px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s; width: 100%; }
+    .rm-input::placeholder { color: rgba(255,255,255,0.3); }
+    .rm-input:focus { border-color: var(--gold-light); }
+    .rm-submit { margin-top: 4px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--white); border: 1px solid var(--gold); padding: 12px 20px; cursor: pointer; transition: background 0.2s; text-align: left; width: 100%; }
+    .rm-submit:hover { background: #8a6432; border-color: #8a6432; }
+    .rm-success { display: none; padding: 14px 18px; background: rgba(45,106,79,0.15); border: 1px solid rgba(45,106,79,0.3); font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.65; }
+    .rm-success strong { color: var(--white); }
+    /* Workflow doc card - direct download, no gate */
+    .rm-card.rm-open { background: rgba(160,120,64,0.07); border: 1px solid rgba(160,120,64,0.2); }
+    .rm-download-btn { display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); border: 1px solid rgba(160,120,64,0.35); padding: 12px 20px; text-decoration: none; transition: background 0.2s; margin-top: auto; }
+    .rm-download-btn:hover { background: rgba(160,120,64,0.12); }
+    .rm-disclaimer { margin-top: 32px; padding: 16px 20px; border: 1px solid rgba(255,255,255,0.07); font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.3); line-height: 1.7; font-style: italic; }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 40px 56px; display: flex; align-items: center; justify-content: space-between; background: var(--off); margin-top: 0; }
+    .footer-left { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--muted); }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+    .footer-right a { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    .footer-right a:hover { border-color: var(--gold); }
+    .footer-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      header { padding: 0 24px; height: 60px; }
+      .logo-wordmark { font-size: 17px; }
+      nav { gap: 16px; }
+      nav a:not(.nav-contact) { font-size: 10px; letter-spacing: 0.12em; }
+      .nav-contact { padding: 6px 12px; font-size: 10px; }
+      .page { padding-top: 60px; }
+      .page-hero { grid-template-columns: 1fr; padding: 60px 24px 48px; gap: 36px; }
+      .compliance-strip { grid-template-columns: repeat(2,1fr); padding: 24px; gap: 1px; }
+      .cs-item { padding: 16px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .mechanism { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+      .compliance-section { padding: 60px 24px; }
+      .compliance-grid { grid-template-columns: 1fr; }
+      .comparison { padding: 60px 24px; }
+      .comparison-table th:nth-child(2), .comparison-table td:nth-child(2) { display: none; }
+      .economics { padding: 60px 24px; }
+      .econ-grid { grid-template-columns: 1fr 1fr; }
+      .compounds { padding: 60px 24px; }
+      .compounds-grid { grid-template-columns: 1fr 1fr; }
+      .workflow-cta { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+      .research-materials { padding: 60px 24px; }
+      .rm-grid { grid-template-columns: 1fr; }
+      .rm-form-row { grid-template-columns: 1fr; }
+      
+      .order-cards { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 20px; padding: 32px 24px; text-align: center; }
+      .footer-right { align-items: center; }
+    }
+    @media (max-width: 600px) {
+      .econ-grid { grid-template-columns: 1fr; }
+      .compounds-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-color-scheme: dark) {
+      html, body { background: #fafaf8 !important; color: #1a1714 !important; }
+      header { background: rgba(250,250,248,0.96) !important; }
+      * { color-scheme: light !important; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-left.visible{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-right.visible{opacity:1;transform:translateX(0)}
+    .reveal-d1{transition-delay:.12s}.reveal-d2{transition-delay:.24s}.reveal-d3{transition-delay:.36s}.reveal-d4{transition-delay:.48s}
+    /* ── STICKY CTA ── */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--ink);border-top:1px solid rgba(160,120,64,0.35);padding:13px 56px;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta-msg{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:rgba(255,255,255,0.8)}
+    .sticky-cta-msg em{color:var(--gold-light);font-style:italic}
+    .sticky-btns{display:flex;gap:8px;align-items:center;flex-shrink:0}
+    .s-btn-p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:1px solid var(--gold);padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background 0.2s}
+    .s-btn-p:hover{background:var(--gold-light);border-color:var(--gold-light)}
+    .s-btn-s{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,0.4);padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background 0.2s}
+    .s-btn-s:hover{background:rgba(160,120,64,.1)}
+    .s-dismiss{background:none;border:none;color:rgba(255,255,255,.25);font-size:16px;cursor:pointer;padding:4px 6px;line-height:1;margin-left:4px}
+    .s-dismiss:hover{color:rgba(255,255,255,.6)}
+    /* ── MARQUEE ── */
+    .mq-wrap{overflow:hidden;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:11px 0;cursor:default}
+    .mq-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+    .mq-wrap:hover .mq-track{animation-play-state:paused}
+    .mq-item{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 36px;border-right:1px solid rgba(255,255,255,.07);white-space:nowrap}
+    .mq-item.hi{color:var(--gold-light)}
+    @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    /* ── HERO ENTRANCE ── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .h-anim>*{animation:fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) both}
+    .h-anim>*:nth-child(1){animation-delay:.05s}.h-anim>*:nth-child(2){animation-delay:.15s}.h-anim>*:nth-child(3){animation-delay:.25s}.h-anim>*:nth-child(4){animation-delay:.35s}.h-anim>*:nth-child(5){animation-delay:.45s}
+    /* ── PULSE DOT ── */
+    .pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);position:relative;vertical-align:middle;margin-right:6px}
+    .pulse::after{content:'';position:absolute;inset:-3px;border-radius:50%;background:var(--green);opacity:.4;animation:pl 2s ease-out infinite}
+    @keyframes pl{0%{transform:scale(1);opacity:.4}70%{transform:scale(2.2);opacity:0}100%{transform:scale(1);opacity:0}}
+    /* ── COUNT-UP ── */
+    .count-up{font-variant-numeric:tabular-nums}
+    /* ── HOVER LIFT ── */
+    .hover-lift{transition:transform .25s cubic-bezier(0.16,1,0.3,1),box-shadow .25s ease}
+    .hover-lift:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,23,20,.12)}
+
+
+    .faq-section{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .faq-header{margin-bottom:48px}
+    .faq-header .eyebrow{margin-bottom:16px}
+    .faq-header h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--ink)}
+    .faq-header h2 em{font-style:italic;color:var(--gold)}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .faq-item{background:var(--white);padding:0;border:none;cursor:pointer;text-align:left;width:100%;transition:background .2s;display:block}
+    .faq-item:hover{background:var(--cream)}
+    .faq-item.open{background:var(--gold-pale)}
+    .faq-q{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px;font-weight:500;color:var(--ink);line-height:1.45}
+    .faq-icon{font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .3s;line-height:1;display:inline-block}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.22,1,.36,1)}
+    .faq-item.open .faq-a{max-height:600px}
+    .faq-a-inner{padding:0 28px 22px;font-size:13px;font-weight:300;color:var(--mid);line-height:1.8}
+    .faq-a-inner strong{color:var(--ink);font-weight:500}
+    .objection-strip{background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:repeat(3,1fr)}
+    .obj-item{padding:40px 36px;border-right:1px solid rgba(255,255,255,.06)}
+    .obj-item:last-child{border-right:none}
+    .obj-q{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px}
+    .obj-a{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:10px}
+    .obj-detail{font-size:12px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.7}
+    .roi-block{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--ink)}
+    .roi-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);display:flex;align-items:center;gap:14px;margin-bottom:20px}
+    .roi-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold-light)}
+    .roi-block h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--white);margin-bottom:12px}
+    .roi-block h2 em{font-style:italic;color:var(--gold-light)}
+    .roi-block>p{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:580px;line-height:1.85;margin-bottom:48px}
+    .roi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);margin-bottom:20px}
+    .roi-cell{background:rgba(255,255,255,.03);padding:28px 20px;text-align:center}
+    .roi-cell-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px}
+    .roi-cell-val{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:var(--gold-light);line-height:1;margin-bottom:6px}
+    .roi-cell-sub{font-size:11px;font-weight:300;color:rgba(255,255,255,.3);line-height:1.5}
+    .roi-cell.hi .roi-cell-val{color:var(--white);font-size:42px}
+    .roi-note{font-size:11px;font-weight:300;color:rgba(255,255,255,.22);font-style:italic;line-height:1.6}
+    .for-section{padding:72px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .for-section .eyebrow{margin-bottom:16px}
+    .for-section h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);margin-bottom:36px}
+    .for-section h2 em{font-style:italic;color:var(--gold)}
+    .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:24px}
+    .for-card{background:var(--white);padding:28px 24px;transition:background .2s}
+    .for-card:hover{background:var(--gold-pale)}
+    .for-spec{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+    .for-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--ink);margin-bottom:8px}
+    .for-why{font-size:12px;font-weight:300;color:var(--mid);line-height:1.7}
+    .not-for-box{padding:18px 24px;border:1px solid var(--border);background:var(--white);font-size:13px;font-weight:300;color:var(--muted);line-height:1.7}
+    .not-for-box strong{font-weight:500;color:var(--mid)}
+    .urgency-band{padding:18px 56px;background:var(--ink);border-bottom:1px solid rgba(160,120,64,.2);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .urg-left{display:flex;flex-direction:column;gap:3px}
+    .urg-main{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--white)}
+    .urg-main strong{color:var(--gold-light)}
+    .urg-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+    .cred-bar{padding:28px 56px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:32px;flex-wrap:wrap;background:var(--white)}
+    .cred-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);flex-shrink:0;white-space:nowrap}
+    .cred-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .cred-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--border-med);color:var(--mid);background:var(--off);white-space:nowrap}
+    .cred-badge.g{border-color:rgba(45,106,79,.3);color:var(--green);background:var(--green-pale)}
+    @media(max-width:960px){
+      .faq-grid,.for-grid{grid-template-columns:1fr}
+      .objection-strip{grid-template-columns:1fr}
+      .roi-grid{grid-template-columns:1fr 1fr}
+      .obj-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
+      .faq-section,.roi-block,.for-section,.cred-bar,.urgency-band{padding:48px 24px}
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-diamond"><div class="logo-diamond-inner"></div></div>
+      <div class="logo-wordmark">Majestic <span>R&amp;D</span></div>
+    </a>
+    <nav>
+      <a href="aim.html" class="active">AIM</a>
+      <a href="cbg.html">CBG</a>
+      <a href="peptides.html">Peptides</a>
+      <a href="mailto:majesticrdinfo@gmail.com" class="nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="h-anim">
+        <div class="hero-eyebrow">Delivery Technology</div>
+        <h1>AIM<br><em>Therapeutix</em></h1>
+        <div class="hero-badges">
+          <span class="hero-badge green"><span class="pulse"></span>Non-Sterile Classification</span>
+          <span class="hero-badge green">No USP-797 Required</span>
+          <span class="hero-badge">Physician-Controlled</span>
+          <span class="hero-badge">Licensed Physicians Only</span>
+        </div>
+      </div>
+      <div class="page-hero-right reveal-right">
+        <p>AIM is a non-injectable intranasal delivery vehicle. a proprietary non-Newtonian medium engineered to deliver APIs directly to the CNS via the nasal mucosa, bypassing the blood-brain barrier entirely.</p>
+        <p>The closest analogy is bacteriostatic water: a vehicle, not a drug. The physician determines what to use it with, and administers it under their own professional license and clinical judgment.</p>
+        <div class="compliance-box">
+          <p><strong>Compliance position:</strong> AIM is classified as a non-sterile compounding medium for topical intranasal use. It is not a drug and not a prescription product. No USP-797 sterile facility is required. All therapeutic use is governed solely by the physician's professional license.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+          <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry" class="btn-primary">Order AIM →</a>
+          <a href="#research" class="btn-secondary">Research Documents →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE STRIP -->
+    <div class="mq-wrap">
+      <div class="mq-track"><span class="mq-item hi">Advanced Intranasal Medium</span><span class="mq-item">Non-sterile classification</span><span class="mq-item">No USP-797 required</span><span class="mq-item hi">Physician-controlled vehicle</span><span class="mq-item">Olfactory pathway · CNS delivery</span><span class="mq-item">Trigeminal pathway · CNS delivery</span><span class="mq-item hi">Bypasses blood-brain barrier</span><span class="mq-item">0.25 mL AIM · aqueous protocol</span><span class="mq-item">0.50 mL AIM · lyophilized protocol</span><span class="mq-item hi">200 doses per 50 mL vial</span><span class="mq-item">Distilled water · Vitamin E · Sodium ascorbate</span><span class="mq-item hi">Non-Newtonian gel-to-liquid rheology</span><span class="mq-item">Licensed physicians only</span><span class="mq-item">15 compounds tested with published CNS research</span><span class="mq-item hi">Advanced Intranasal Medium</span><span class="mq-item">Non-sterile classification</span><span class="mq-item">No USP-797 required</span><span class="mq-item hi">Physician-controlled vehicle</span><span class="mq-item">Olfactory pathway · CNS delivery</span><span class="mq-item">Trigeminal pathway · CNS delivery</span><span class="mq-item hi">Bypasses blood-brain barrier</span><span class="mq-item">0.25 mL AIM · aqueous protocol</span><span class="mq-item">0.50 mL AIM · lyophilized protocol</span><span class="mq-item hi">200 doses per 50 mL vial</span><span class="mq-item">Distilled water · Vitamin E · Sodium ascorbate</span><span class="mq-item hi">Non-Newtonian gel-to-liquid rheology</span><span class="mq-item">Licensed physicians only</span><span class="mq-item">15 compounds tested with published CNS research</span></div>
+    </div>
+
+
+    <div class="cred-bar reveal">
+      <span class="cred-label">Classification &amp; compliance</span>
+      <div class="cred-badges">
+        <span class="cred-badge g">Non-Sterile Topical &mdash; USP-795</span>
+        <span class="cred-badge g">No USP-797 Required</span>
+        <span class="cred-badge g">No Sterile Facility</span>
+        <span class="cred-badge">Physician-Controlled Vehicle</span>
+        <span class="cred-badge">Not a Drug</span>
+        <span class="cred-badge">Not a Prescription Product</span>
+        <span class="cred-badge">Licensed Physicians Only</span>
+      </div>
+    </div>
+
+    <!-- MECHANISM -->
+    <section class="mechanism reveal">
+      <div class="mechanism-left">
+        <div class="eyebrow">How It Works</div>
+        <h2>Intranasal delivery via <em>olfactory and trigeminal</em> pathways</h2>
+        <p>AIM is a non-Newtonian intranasal medium. It behaves as a viscous gel at rest. retaining the API at mucosal contact. and transitions to liquid under shear, enabling precise atomization through a standard nasal atomizer.</p>
+        <p>Once delivered, APIs travel via the olfactory and trigeminal nerve pathways directly to the CNS, bypassing both first-pass metabolism and the blood-brain barrier. Published research documents improved CNS bioavailability compared to the subcutaneous route for multiple compound classes.</p>
+        <p>Real-world observational reports across 10 de-identified case summaries. spanning TBI, PTSD, post-stroke recovery, neurodegenerative disease, and inflammatory conditions. describe consistent tolerance, rapid onset, and multi-day benefit from single administrations. Full observational reference document available to qualified physician inquiries.</p>
+        <p>AIM delivery volume is <strong>0.50 mL total (0.25 mL per nostril)</strong> for both protocols. The difference is the AIM volume used per preparation: <strong>0.25 mL AIM</strong> combined with aqueous API for liquid preparations; <strong>0.50 mL AIM</strong> injected directly into lyophilized vials for reconstitution. API compound selection and concentration remain exclusively with the physician. AIM contains distilled water, vitamin E, and sodium ascorbate. providing an antioxidant, naturally antimicrobial environment that extends compounded medication integrity.</p>
+      </div>
+      <div class="mechanism-right">
+        <div class="mechanism-row">
+          <div class="mrow-label">Formulation type</div>
+          <div class="mrow-value">Non-Newtonian intranasal medium (gel-to-liquid under shear)</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">Administration route</div>
+          <div class="mrow-value">Intranasal — non-injectable</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">Sterility classification</div>
+          <div class="mrow-value highlight">Non-sterile — no USP-797 facility required</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">Delivery pathway</div>
+          <div class="mrow-value">Olfactory and trigeminal nerve pathways → direct CNS</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">CNS bioavailability</div>
+          <div class="mrow-value">Substantially higher than subcutaneous — published research</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">AIM Volume — aqueous protocol</div>
+          <div class="mrow-value">0.50 mL AIM delivered (0.25 mL per nostril) — 0.25 mL AIM + physician-prepared aqueous API</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">AIM Volume — lyophilized protocol</div>
+          <div class="mrow-value">0.50 mL AIM delivered (0.25 mL per nostril) — 0.50 mL AIM reconstitutes lyophilized vial</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">Physician control</div>
+          <div class="mrow-value">Full — physician determines compound and concentration</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">Active ingredients</div>
+          <div class="mrow-value">Distilled water, vitamin E, sodium ascorbate</div>
+        </div>
+        <div class="mechanism-row">
+          <div class="mrow-label">Shelf life (refrigerated)</div>
+          <div class="mrow-value">9 months unreconstituted / 30 days post-reconstitution</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE DEEP DIVE -->
+    <section class="compliance-section reveal">
+      <div class="eyebrow">Compliance Framework</div>
+      <h2>Built for how physicians <em>actually practice</em></h2>
+      <p>AIM's classification and physician-facing supply model is structured to minimize regulatory friction while preserving full clinical discretion. Three pillars underpin the compliance position.</p>
+      <div class="compliance-grid">
+        <div class="compliance-card">
+          <div class="compliance-card-icon">§</div>
+          <h3>Non-Sterile Classification</h3>
+          <p>AIM is classified as a non-sterile compounding medium for topical intranasal application. not an injectable, not a drug. This means USP-795 governs rather than USP-797, eliminating the sterile facility requirement entirely.</p>
+          <div class="legal-note">No sterile clean room. No USP-797 compliance burden. USP-795 non-sterile classification — standard office preparation applies.</div>
+        </div>
+        <div class="compliance-card">
+          <div class="compliance-card-icon">⊕</div>
+          <h3>Physician-Controlled Vehicle</h3>
+          <p>AIM is supplied as a standalone delivery vehicle. the same conceptual model as bacteriostatic water. The physician independently sources their compounds and determines use under their own professional license and clinical judgment.</p>
+          <div class="legal-note">Majestic R&D supplies the vehicle only. Compound selection, concentration, and therapeutic use are 100% under physician license.</div>
+        </div>
+        <div class="compliance-card">
+          <div class="compliance-card-icon">◈</div>
+          <h3>No Prescription Required</h3>
+          <p>AIM itself is not a prescription product. It is an aqueous intranasal medium supplied directly to licensed physicians for use in their practice. There is no patient-facing prescription requirement for the vehicle itself.</p>
+          <div class="legal-note">Supplied physician-to-physician. All therapeutic decisions and patient interactions remain within the physician's existing scope of practice.</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WHO IT'S FOR -->
+    <section class="for-section reveal">
+      <div class="eyebrow">Best Practice Fit</div>
+      <h2>Six specialties where AIM <em>changes the calculus.</em></h2>
+      <div class="for-grid">
+        <div class="for-card hover-lift">
+          <div class="for-spec">Neurology</div>
+          <div class="for-title">Direct CNS access without a needle</div>
+          <div class="for-why">AIM delivers via olfactory and trigeminal nerves directly to the CNS. Published observational data on TBI, post-stroke recovery, and neurodegenerative conditions. Uniquely compelling for neurologists already working with complex CNS patients.</div>
+        </div>
+        <div class="for-card hover-lift">
+          <div class="for-spec">Psychiatry &amp; Mental Health</div>
+          <div class="for-title">Non-invasive. Rapid onset.</div>
+          <div class="for-why">PTSD observational data from 18 former Special Operations contractors. Near-immediate subjective relief. Multi-day benefit from single administrations. Complements existing psychiatric protocols without displacement.</div>
+        </div>
+        <div class="for-card hover-lift">
+          <div class="for-spec">Integrative &amp; Functional Medicine</div>
+          <div class="for-title">15 compounds. Full flexibility.</div>
+          <div class="for-why">NAD+, glutathione, vitamin C, magnesium, melatonin, BPC-157, semaglutide, and more &mdash; all tested. Physician controls compound selection and concentration. No formulary restrictions. No facility investment.</div>
+        </div>
+        <div class="for-card hover-lift">
+          <div class="for-spec">Pain Management</div>
+          <div class="for-title">Non-invasive delivery for anti-inflammatories</div>
+          <div class="for-why">CBG, BPC-157, and NAC have documented anti-inflammatory CNS mechanisms. AIM delivers them without injections, reducing patient reluctance and liability associated with invasive delivery.</div>
+        </div>
+        <div class="for-card hover-lift">
+          <div class="for-spec">Anti-Aging &amp; Longevity</div>
+          <div class="for-title">NAD+, Rapamycin, and more</div>
+          <div class="for-why">NAD+ precursors, melatonin, and GLP-1 compounds all have published longevity-relevant CNS mechanisms. AIM&rsquo;s non-Newtonian rheology enhances mucosal contact time and CNS uptake vs. simple aqueous sprays.</div>
+        </div>
+        <div class="for-card hover-lift">
+          <div class="for-spec">Concierge &amp; Cash-Pay</div>
+          <div class="for-title">$500 vial. 200 doses. Simple economics.</div>
+          <div class="for-why">$2.50/dose vehicle cost. Physician sets practice pricing. No sterile facility overhead, no sharps disposal, no complex compounding workflow. The simplest way to add a premium CNS delivery service to a concierge practice.</div>
+        </div>
+      </div>
+      <div class="not-for-box"><strong>Not the right fit if:</strong> You operate exclusively on standard-of-care insurance reimbursement, are not the clinical decision-maker, or do not currently have or intend to develop any cash-pay component to your practice.</div>
+    </section>
+
+
+    <div class="objection-strip reveal">
+      <div class="obj-item">
+        <div class="obj-q">Top concern &mdash; liability</div>
+        <div class="obj-a">&ldquo;I&rsquo;m worried about liability if I use this with a compound.&rdquo;</div>
+        <div class="obj-detail">AIM is a delivery vehicle &mdash; same model as bacteriostatic water. You independently source your compound and administer under your professional license. Majestic R&amp;D supplies the vehicle only. Every clinical decision, including compound selection and dosing, is yours. That&rsquo;s how it works legally and professionally.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Top concern &mdash; efficacy</div>
+        <div class="obj-a">&ldquo;Is there actual evidence this delivers to the CNS?&rdquo;</div>
+        <div class="obj-detail">Published research documents improved CNS bioavailability via the intranasal route for multiple compound classes. The olfactory and trigeminal nerve pathways are well-characterized in peer-reviewed literature. The full citation reference whitepaper with 15 compounds and CNS observations is available to qualified physicians &mdash; request it above.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Top concern &mdash; simplicity</div>
+        <div class="obj-a">&ldquo;How complicated is the administration protocol?&rdquo;</div>
+        <div class="obj-detail">Two steps: draw AIM + compound, pass through Luer-lock coupler, attach nasal atomizer, administer. Total time under 3 minutes. Aqueous protocol uses 0.25 mL AIM + aqueous compound. Lyophilized protocol uses 0.50 mL AIM to reconstitute the vial. Full step-by-step clinical workflow guide is open access &mdash; no intake required.</div>
+      </div>
+    </div>
+
+    <!-- COMPARISON -->
+    <section class="comparison reveal">
+      <div class="comparison-header">
+        <div class="eyebrow">AIM vs. Injectable</div>
+        <h2>A materially different <em>delivery profile</em></h2>
+      </div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Injectable (standard)</th>
+            <th>AIM Intranasal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sterility requirement</td>
+            <td>USP-797 sterile facility required</td>
+            <td class="check">Non-sterile — no USP-797 required</td>
+          </tr>
+          <tr>
+            <td>Administration</td>
+            <td>Subcutaneous injection — needle, sharps disposal, patient training</td>
+            <td class="check">Intranasal atomizer — no needle, no sharps</td>
+          </tr>
+          <tr>
+            <td>CNS delivery</td>
+            <td>Indirect via bloodstream only</td>
+            <td class="check">Direct via olfactory and trigeminal nerve pathways</td>
+          </tr>
+          <tr>
+            <td>Bioavailability</td>
+            <td>Baseline systemic exposure</td>
+            <td class="check">Substantially higher CNS bioavailability — published research</td>
+          </tr>
+          <tr>
+            <td>Patient experience</td>
+            <td>Needle anxiety, injection site reactions, sharps handling</td>
+            <td class="check">Non-invasive nasal spray — high patient acceptance</td>
+          </tr>
+          <tr>
+            <td>Physician control</td>
+            <td>Limited by compounding facility formulary and capacity</td>
+            <td class="check">Full — physician determines compound and concentration</td>
+          </tr>
+          <tr>
+            <td>Regulatory classification</td>
+            <td>Sterile injectable compound</td>
+            <td class="check">Non-sterile topical — simplified compliance</td>
+          </tr>
+          <tr>
+            <td>First-pass metabolism</td>
+            <td>Subject to hepatic first-pass (oral) or systemic distribution (SQ)</td>
+            <td class="check">Bypassed via mucosal/CNS pathway</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ECONOMICS -->
+    <section class="economics reveal">
+      <div class="eyebrow">Practice Economics</div>
+      <h2>What this means for your <em>practice revenue</em></h2>
+      <p>AIM is designed to be a margin-positive addition to any physician's existing practice. The economics are straightforward. your cost is low, your markup opportunity is significant, and dosing density is high.</p>
+
+      <div class="econ-grid">
+        <div class="econ-card reveal">
+          <div class="econ-card-label">Doses per 50 mL vial</div>
+          <div class="econ-card-value">200</div>
+          <div class="econ-card-sub">Aqueous protocols use 0.25 mL AIM per dose. Lyophilized protocols use 0.50 mL AIM. 100 doses per vial.</div>
+        </div>
+        <div class="econ-card reveal">
+          <div class="econ-card-label">Your cost per dose (aqueous)</div>
+          <div class="econ-card-value">$2.50</div>
+          <div class="econ-card-sub">200 doses per 50 mL vial @ $500. Vehicle cost only. Compound costs are separate.</div>
+        </div>
+        <div class="econ-card reveal">
+          <div class="econ-card-label">Suggested patient margin</div>
+          <div class="econ-card-value">30%+</div>
+          <div class="econ-card-sub">Built-in margin guidance. You control your patient-facing pricing entirely.</div>
+        </div>
+      </div>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Vial Size</th>
+            <th>Aqueous Doses (0.25 mL AIM)</th>
+            <th>Lyophilized Doses (0.50 mL AIM)</th>
+            <th>Your Price</th>
+            <th>Practice Revenue / Dose (30% markup, aqueous)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="featured">
+            <td>50 mL Bulk Vial</td>
+            <td>50 mL</td>
+            <td>200 (0.25 mL AIM)</td>
+            <td>100 (0.50 mL AIM)</td>
+            <td class="gold">$500</td>
+            <td>$3.25 / dose · $97.50 / 30-dose supply</td>
+          </tr>
+          <tr class="featured">
+            <td>2×50 mL Bulk Vials</td>
+            <td>2×50 mL</td>
+            <td>400 (0.25 mL AIM)</td>
+            <td>200 (0.50 mL AIM)</td>
+            <td class="gold">$900</td>
+            <td>$3.25 / dose · $97.50 / 30-dose supply</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="pricing-note">AIM vehicle pricing only. API compounds sourced independently by physician. Volume and intro pricing available. contact us to discuss your practice's needs.</p>
+    </section>
+
+    <!-- MID-PAGE CTA -->
+    <div style="padding:40px 56px;background:var(--gold-pale);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Ready to order?</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--ink);">50 mL vial. $500. Ships to your practice. Physician verification required.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry — 50mL Bulk Vial" class="btn-primary" style="white-space:nowrap;">Inquire to Order →</a>
+        <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="btn-secondary" style="white-space:nowrap;">Schedule a Call →</a>
+      </div>
+    </div>
+
+    <!-- COMPOUNDS -->
+    <section class="compounds reveal">
+      <div class="compounds-header">
+        <div class="eyebrow">Tested Compounds</div>
+        <h2>15 compounds tested. <em>Published CNS research across all.</em></h2>
+        <p>The following compounds have been tested with AIM delivery. Published peer-reviewed research exists for all 15. Full citation reference document available to qualified physician inquiries. Compound selection and use remain entirely under physician license.</p>
+      </div>
+      <div class="compounds-grid">
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Semaglutide</div>
+          <div class="compound-card-sub">GLP-1 Receptor Agonist</div>
+          <div class="compound-card-obs">Neuroprotection, anti-inflammatory CNS effects. GLP-1 receptors expressed throughout CNS. Published: Hansen et al. (2015), Gejl et al. (2016).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Tirzepatide</div>
+          <div class="compound-card-sub">GLP-1 / GIP Dual Agonist</div>
+          <div class="compound-card-obs">Neuroprotection, systemic anti-inflammatory. GIP receptors expressed in hippocampal and cortical neurons. Published: Samms et al. (2021), Khera et al. (2023).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Retatrutide</div>
+          <div class="compound-card-sub">Triple Agonist — Investigational</div>
+          <div class="compound-card-obs">CNS metabolic regulation, neuroinflammatory modulation. Published: Coskun et al. (2022), Jastreboff et al. (2023).</div>
+          <span class="compound-flag">Investigational</span>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">BPC-157</div>
+          <div class="compound-card-sub">Synthetic Pentadecapeptide</div>
+          <div class="compound-card-obs">Angiogenesis, blood-brain barrier repair, neuroprotective effects. Published: Sikiric et al. (2018), Vukojevic et al. (2022).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">NAC</div>
+          <div class="compound-card-sub">N-Acetyl Cysteine</div>
+          <div class="compound-card-obs">Glutathione precursor. Neuroinflammation, mood regulation, cognitive support. Published: Atkuri et al. (2007), Deepmala et al. (2015).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">CBG</div>
+          <div class="compound-card-sub">Cannabigerol</div>
+          <div class="compound-card-obs">Anti-inflammatory, neuroprotective. Published: Borrelli et al. (2013), Valdeolivas et al. (2015).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Insulin</div>
+          <div class="compound-card-sub">Research Grade</div>
+          <div class="compound-card-obs">Neurological energy metabolism, neuroprotection. Human intranasal data exists. Published: Craft &amp; Watson (2004), Benedict et al. (2007).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Vitamin C</div>
+          <div class="compound-card-sub">Ascorbic Acid</div>
+          <div class="compound-card-obs">Neuroprotection, antioxidant defense, neurotransmitter synthesis, myelin support. Published: Harrison &amp; May (2009), May (2012).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Vitamin D</div>
+          <div class="compound-card-sub">Research Grade</div>
+          <div class="compound-card-obs">Dopamine pathways, neurotrophic factors, blood-brain barrier stability. Published: Eyles et al. (2013), Garcion et al. (2002).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Vitamin B12</div>
+          <div class="compound-card-sub">Cobalamin</div>
+          <div class="compound-card-obs">Myelin synthesis, methylation pathways, cognitive health, peripheral nerve integrity. Published: Scalabrino (2009), O'Leary &amp; Samman (2010).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Glutathione</div>
+          <div class="compound-card-sub">Research Grade</div>
+          <div class="compound-card-obs">Mitochondrial protection, dopaminergic cell defense, oxidative neuronal injury. Published: Dringen (2000), Zeevalk et al. (2008).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Magnesium</div>
+          <div class="compound-card-sub">Research Grade</div>
+          <div class="compound-card-obs">NMDA receptor regulation, synaptic plasticity, neuroinflammation. Published: Slutsky et al. (2010), Barbagallo &amp; Dominguez (2010).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Zinc</div>
+          <div class="compound-card-sub">Research Grade — Note: Risks at elevated levels</div>
+          <div class="compound-card-obs">NMDA receptor activity, BDNF/neuroplasticity, GABA signaling. Published: Frederickson et al. (2005), Takeda (2000).</div>
+          <span class="compound-flag">Risk notation</span>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">Melatonin</div>
+          <div class="compound-card-sub">Research Grade</div>
+          <div class="compound-card-obs">Chronobiotic, antioxidant, mitochondrial protector, neuroimmune modulator. Published: Reiter et al. (2014), Carrillo-Vico et al. (2013).</div>
+        </div>
+        <div class="compound-card hover-lift">
+          <div class="compound-card-name">NAD+</div>
+          <div class="compound-card-sub">Research Grade</div>
+          <div class="compound-card-obs">Mitochondrial energy, DNA repair, neuronal survival, aging biology. Published: Verdin (2015), Hou et al. (2018).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH MATERIALS -->
+    <section class="research-materials reveal" id="research">
+      <div class="eyebrow">Physician Reference Documents</div>
+      <h2>Clinical research. <em>In your hands.</em></h2>
+      <p>Two reference documents are available to qualified physicians. The Compound Compatibility Whitepaper requires a brief intake. we use it to verify licensure and follow up directly. The Clinical Workflow Guide is open access.</p>
+
+      <div class="rm-grid">
+
+        <!-- WHITEPAPER — GATED -->
+        <div class="rm-card">
+          <div class="rm-card-tag">Research Reference · Gated</div>
+          <h3>AIM Compound Compatibility<br>Whitepaper</h3>
+          <p>Full compound compatibility reference for licensed physicians. Peer-reviewed citations, CNS observations, and AIM delivery context for all 15 compounds tested with AIM. API compound selection and concentration are determined exclusively by the physician.</p>
+          <div class="rm-card-contents">
+            <span>15 compounds — CNS observations + key citations</span>
+            <span>AIM vs. injectable comparison table</span>
+            <span>Aqueous and lyophilized AIM delivery protocols</span>
+            <span>10 de-identified observational case summaries</span>
+            <span>Compliance position and regulatory classification</span>
+            <span>Pending attorney review items flagged</span>
+          </div>
+          <div class="rm-gate">
+            <div class="rm-gate-label">Complete intake to receive document</div>
+            <div id="wp-form" class="rm-form">
+              <div class="rm-form-row">
+                <input class="rm-input" id="wp-name" type="text" placeholder="Full name" autocomplete="name" />
+                <input class="rm-input" id="wp-email" type="email" placeholder="Email address" autocomplete="email" />
+              </div>
+              <div class="rm-form-row">
+                <input class="rm-input" id="wp-practice" type="text" placeholder="Practice name" />
+                
+              </div>
+              <input class="rm-input" id="wp-specialty" type="text" placeholder="Specialty (e.g. Neurology, Integrative Medicine, Pain)" />
+              <button class="rm-submit" onclick="submitWhitepaperRequest()">Request Whitepaper →</button>
+            </div>
+            <div id="wp-success" class="rm-success">
+              <strong>Request received.</strong> We'll verify your license and send the document to your email. Typically within one business day. If you have questions in the meantime, reach us at <a href="mailto:majesticrdinfo@gmail.com" style="color:var(--gold-light);">majesticrdinfo@gmail.com</a>.
+            </div>
+          </div>
+        </div>
+
+        <!-- UTILIZATION SUMMARY — GATED -->
+        <div class="rm-card">
+          <div class="rm-card-tag">Observational Reference · Gated</div>
+          <h3>Physician Utilization<br>Summary</h3>
+          <p>Ten de-identified observational case summaries across TBI, PTSD, post-stroke recovery, neurodegenerative disease, autism spectrum, and inflammatory conditions. Anecdotal context for physician reference only.</p>
+          <div class="rm-card-contents">
+            <span>10 de-identified case summaries with full detail</span>
+            <span>Condition, compound, delivery method, observations</span>
+            <span>PTSD · TBI · Post-stroke · Alzheimer's · EDS · Migraine</span>
+            <span>Former NFL / SOF populations included</span>
+            <span>Safety observation (stimulant class / hypertension)</span>
+            <span>Anecdotal disclaimer on every case</span>
+          </div>
+          <div class="rm-gate">
+            <div class="rm-gate-label">Complete intake to receive document</div>
+            <div id="us-form" class="rm-form">
+              <div class="rm-form-row">
+                <input class="rm-input" id="us-name" type="text" placeholder="Full name" autocomplete="name" />
+                <input class="rm-input" id="us-email" type="email" placeholder="Email address" autocomplete="email" />
+              </div>
+              <div class="rm-form-row">
+                <input class="rm-input" id="us-practice" type="text" placeholder="Practice name" />
+                
+              </div>
+              <input class="rm-input" id="us-specialty" type="text" placeholder="Specialty (e.g. Neurology, Integrative Medicine, Pain)" />
+              <button class="rm-submit" onclick="submitUtilizationRequest()">Request Utilization Summary →</button>
+            </div>
+            <div id="us-success" class="rm-success">
+              <strong>Request received.</strong> We'll verify your license and send the document to your email. Typically within one business day. Reach us at <a href="mailto:majesticrdinfo@gmail.com" style="color:var(--gold-light);">majesticrdinfo@gmail.com</a> with any questions.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="rm-disclaimer">These documents are physician reference materials only. They do not constitute clinical guidance, treatment protocols, or efficacy claims. All compound use remains under the ordering physician's professional license and clinical judgment. Observational case summaries are anecdotal and testimonial in nature. not controlled clinical evidence.</div>
+
+      <!-- Open access: Clinical Workflow -->
+      <div style="margin-top:1px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:10px;">Clinical Implementation · Open Access</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--white);margin-bottom:6px;">AIM Clinical Workflow Guide</div>
+          <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.7;max-width:560px;">Step-by-step administration protocols for both aqueous and lyophilized API preparations. Includes patient positioning, syringe technique, take-home reconstitution, storage guidance, and patient training script. No intake required.</div>
+        </div>
+        <a href="aim_clinical_workflow.html" class="rm-download-btn" style="white-space:nowrap;">View Workflow Guide →</a>
+      </div>
+    </section>
+
+    <!-- WORKFLOW CTA -->
+    <section class="workflow-cta reveal">
+      <div>
+        <div class="eyebrow">Clinical Implementation</div>
+        <h2>Up and running in your practice in <em>one visit.</em></h2>
+        <p>AIM administration follows a simple two-syringe protocol for in-office delivery, and a vial reconstitution protocol for take-home use by the patient under physician direction. No special equipment beyond a standard Luer-lock nasal atomizer.</p>
+        <p>Full clinical workflow documentation — including step-by-step AIM preparation protocols for aqueous and lyophilized APIs, administration guides, and storage guidance — is available in the Provider Guide. API selection and concentration remain exclusively with the treating physician.</p>
+        <div class="cta-buttons">
+          <a href="aim_clinical_workflow.html" class="btn-primary">View Clinical Workflow Guide →</a>
+          <a href="mailto:majesticrdinfo@gmail.com" class="btn-secondary">Request Physician Access →</a>
+        </div>
+      </div>
+      <div class="workflow-steps">
+        <div class="wf-step">
+          <div class="wf-num">01</div>
+          <div class="wf-text">
+            <h4>Draw AIM — 18g needle required</h4>
+            <p>Aqueous: draw 0.25 mL AIM. Lyophilized: draw 0.50 mL AIM. Both deliver 0.50 mL total (0.25 mL per nostril).</p>
+          </div>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">02</div>
+          <div class="wf-text">
+            <h4>Combine via Luer-lock coupler</h4>
+            <p>5–6 passes. Draw full 0.50 mL into single syringe. Attach nasal atomizer.</p>
+          </div>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">03</div>
+          <div class="wf-text">
+            <h4>Administer — 0.25 mL per nostril</h4>
+            <p>Patient seated, head tilted back 10–15°. Breath-hold during actuation.</p>
+          </div>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">04</div>
+          <div class="wf-text">
+            <h4>Post-administration — 5 minutes no blowing</h4>
+            <p>Do not blow or sniff. Remain still 2–3 minutes. Physician determines administration timing.</p>
+          </div>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">05</div>
+          <div class="wf-text">
+            <h4>Take-home: reconstitute lyophilized vials with AIM</h4>
+            <p>Inject AIM directly into peptide vial. Physician determines take-home use protocol and trains patient accordingly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq-section reveal" id="faq">
+      <div class="faq-header">
+        <div class="eyebrow">Common Questions</div>
+        <h2>What physicians ask <em>before they order.</em></h2>
+      </div>
+      <div class="faq-grid">
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What exactly is AIM and how is it different from a nasal spray?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">AIM is a non-Newtonian fluid &mdash; it behaves as a viscous gel at rest (retaining the API at the mucosal surface) and transitions to liquid under shear (enabling clean atomization). A standard nasal spray is aqueous and runs off the mucosa immediately. AIM&rsquo;s rheology maximizes contact time and CNS absorption. It is not a drug and not a prescription product.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Can I use any compound with AIM?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Any aqueous-compatible compound under your professional license. We have 15 tested compounds with published CNS research. You are not limited to that list &mdash; you determine compound, concentration, and use. The physician whitepaper documents compatibility data for all 15. Compounds requiring 18g or larger needle gauge for drawing are compatible; thinner needles may not draw AIM efficiently due to its viscosity.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What&rsquo;s my liability exposure?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">AIM is a vehicle, not a drug. You determine what you use it with, under your professional license. Majestic R&amp;D supplies the vehicle only &mdash; no clinical direction, no dosing recommendations, no patient-facing materials. The legal model is the same as purchasing bacteriostatic water for physician-directed preparation. All therapeutic decisions remain with you.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How does the 50 mL vial break down economically?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Aqueous protocol: 200 doses at $500 = $2.50/dose vehicle cost. Lyophilized protocol: 100 doses at $500 = $5.00/dose. You set your suggested physician price. Many physicians charge $3&ndash;5/dose in a bundled administration fee, or include it in a program fee. The vehicle cost is low enough that the margin is determined entirely by how you price your service.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is AIM the same as bacteriostatic water from a compliance standpoint?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Conceptually similar &mdash; both are vehicles you purchase and use with compounds under your license. The classification differs: AIM is a non-Newtonian intranasal medium classified as a non-sterile topical under USP-795. Bacteriostatic water is typically injected and prepared under stricter guidelines. AIM&rsquo;s non-sterile topical classification is what eliminates the USP-797 facility requirement.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What happens after I place an order?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Orders ship directly to your licensed practice address. Physician license confirmation is required on first order. The 50 mL vial arrives ready to use. Clinical workflow documentation, mixing protocol cards, and patient instruction templates are available as downloadable resources. If you have questions, your point of contact is available by email within one business day.</div></div>
+        </button>
+      </div>
+    </section>
+
+
+    <div class="urgency-band">
+      <div class="urg-left">
+        <div class="urg-main">Currently accepting new physician inquiries. <strong>Order or request documents below.</strong></div>
+        <div class="urg-sub">Email response within 1 business day &middot; Physician verification required on first order</div>
+      </div>
+      <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry" class="s-btn-p">Order AIM &rarr;</a>
+    </div>
+
+    <!-- ORDERING -->
+    <section class="ordering reveal">
+      <div class="eyebrow">Order Information</div>
+      <h2>Two options. <em>Both simple.</em></h2>
+      <p>AIM is supplied directly to licensed physicians in 50 mL bulk vials. No compounding facility required. Orders ship directly to your practice. Physician license confirmation required on first order.</p>
+
+      <div class="order-cards">
+        <div class="order-card featured hover-lift">
+          <div class="order-badge">Standard</div>
+          <div class="order-card-label">Bulk Vial</div>
+          <div class="order-card-name">50 mL</div>
+          <div class="order-card-doses">200 doses aqueous (0.25 mL AIM) · 100 doses lyophilized (0.50 mL AIM)</div>
+          <div class="order-price"><span>$</span>500</div>
+          <div class="order-per">per vial, shipped to physician practice</div>
+          <div class="order-divider"></div>
+          <div class="order-detail"><strong>Cost / aqueous dose:</strong> $2.50 (vehicle only)</div>
+          <div class="order-detail"><strong>Cost / lyophilized dose:</strong> $5.00 (vehicle only)</div>
+          <div class="order-detail"><strong>Practice revenue @ 30% markup (aqueous):</strong> $3.25 / dose · $97.50 / 30-day supply</div>
+          <div class="order-detail"><strong>Delivered per dose:</strong> 0.50 mL (0.25 mL per nostril)</div>
+          <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry — 50mL Bulk Vial" class="order-cta">Inquire to Order →</a>
+        </div>
+        <div class="order-card featured hover-lift">
+          <div class="order-badge">Best Value</div>
+          <div class="order-card-label">Bulk Vial — 2-Pack</div>
+          <div class="order-card-name">2×50 mL</div>
+          <div class="order-card-doses">400 doses aqueous (0.25 mL AIM) · 200 doses lyophilized (0.50 mL AIM)</div>
+          <div class="order-price"><span>$</span>900</div>
+          <div class="order-per">per 2-vial set, shipped to physician practice</div>
+          <div class="order-divider"></div>
+          <div class="order-detail"><strong>Cost / aqueous dose:</strong> $2.25 (vehicle only)</div>
+          <div class="order-detail"><strong>Cost / lyophilized dose:</strong> $4.50 (vehicle only)</div>
+          <div class="order-detail"><strong>Practice revenue @ 30% markup (aqueous):</strong> $2.93 / dose · $87.75 / 30-day supply</div>
+          <div class="order-detail"><strong>Delivered per dose:</strong> 0.50 mL (0.25 mL per nostril)</div>
+          <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry — 2x50mL Bulk Vial" class="order-cta">Inquire to Order →</a>
+        </div>
+      </div>
+
+      <div class="ordering-note">
+        <p>All orders ship to your licensed practice address. AIM is supplied to licensed physicians only. <strong>Full citation reference whitepaper</strong> (all 15 compound studies) and observational utilization summary available. <a href="#research" style="color:var(--gold);">request access above</a>. Contact us to discuss practice volume needs.</p>
+      </div>
+    </section>
+
+    <!-- FINAL ACTION STRIP -->
+    <div style="padding:64px 56px;background:var(--ink);display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;border-top:1px solid rgba(255,255,255,0.06);">
+      <div style="padding:32px;border-right:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;">Step 1</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--white);margin-bottom:8px;">Order AIM</div>
+        <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:20px;">50 mL bulk vial shipped directly to your practice. Physician license confirmation on first order. No facility required.</div>
+        <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,0.4);padding:10px 18px;text-decoration:none;transition:background 0.2s;display:inline-block;" onmouseover="this.style.background='rgba(160,120,64,0.1)'" onmouseout="this.style.background='transparent'">Inquire to Order →</a>
+      </div>
+      <div style="padding:32px;border-right:1px solid rgba(255,255,255,0.06);">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;">Step 2</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--white);margin-bottom:8px;">Request Reference Documents</div>
+        <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:20px;">Compound Compatibility Whitepaper and Utilization Summary available to qualified physicians. Short intake form above.</div>
+        <a href="#research" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,0.4);padding:10px 18px;text-decoration:none;transition:background 0.2s;display:inline-block;" onmouseover="this.style.background='rgba(160,120,64,0.1)'" onmouseout="this.style.background='transparent'">Request Documents →</a>
+      </div>
+      <div style="padding:32px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;">Step 3</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--white);margin-bottom:8px;">View Workflow Guide</div>
+        <div style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:20px;">Step-by-step administration protocol. Aqueous and lyophilized preparation. Patient training and take-home reconstitution. Open access.</div>
+        <a href="aim_clinical_workflow.html" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,0.4);padding:10px 18px;text-decoration:none;transition:background 0.2s;display:inline-block;" onmouseover="this.style.background='rgba(160,120,64,0.1)'" onmouseout="this.style.background='transparent'">View Workflow Guide →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">&copy; 2026 Majestic R&D, LLC. All rights reserved.</div>
+    <div class="footer-right">
+      <a href="mailto:majesticrdinfo@gmail.com">majesticrdinfo@gmail.com</a>
+      <div class="footer-note">Licensed Physician Access Only</div>
+    </div>
+  </footer>
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-cta-msg">AIM — 50 mL bulk vial. <em>$500. Ships direct to your practice.</em></div>
+    <div class="sticky-btns">
+      <a href="mailto:majesticrdinfo@gmail.com?subject=AIM Order Inquiry — 50mL Bulk Vial" class="s-btn-p">Order AIM &rarr;</a>
+      <a href="#research" class="s-btn-s">Request Documents &rarr;</a>
+      <button class="s-dismiss" id="s-dismiss" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // Scroll reveal
+      const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.22,rootMargin:'0px 0px -160px 0px'});
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+      // Sticky CTA
+      const sc=document.getElementById('sticky-cta');
+      if(sc){let dismissed=false;window.addEventListener('scroll',()=>{if(!dismissed)sc.classList.toggle('show',window.scrollY>window.innerHeight*.75);},{passive:true});const sd=document.getElementById('s-dismiss');if(sd)sd.addEventListener('click',()=>{dismissed=true;sc.classList.remove('show');});}
+      // Count-up
+      function countUp(el){const t=parseFloat(el.dataset.t),pre=el.dataset.pre||'',suf=el.dataset.suf||'',dec=+(el.dataset.dec||0),dur=1400,s=performance.now(),ease=p=>1-Math.pow(1-p,3);(function fr(n){const p=Math.min((n-s)/dur,1);el.textContent=pre+(t*ease(p)).toFixed(dec)+suf;p<1&&requestAnimationFrame(fr);})(s);}
+      const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done=1;countUp(e.target);}}),{threshold:.5});
+      document.querySelectorAll('.count-up').forEach(el=>co.observe(el));
+      // Active nav
+      const secs=document.querySelectorAll('section[id]'),navs=document.querySelectorAll('nav a');
+      window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});navs.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active');});},{passive:true});
+
+    function toggleFaq(el){var was=el.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)el.classList.add('open');}
+
+    })();
+  </script>
+
+</body>
+</html>

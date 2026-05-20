@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Majestic R&amp;D — Physician Research Supply</title>
+  <meta name="description" content="Majestic R&amp;D supplies licensed physicians with research-grade compounds and proprietary delivery technology. AIM intranasal delivery, GLP peptide program, and topical CBG." />
+  <meta name="color-scheme" content="light only" />
+  <meta property="og:title" content="Majestic R&amp;D — Physician Research Supply" />
+  <meta property="og:description" content="AIM intranasal delivery technology, GLP-1 peptide program, and topical CBG. Physician-facing. Licensed practitioners only." />
+  <meta property="og:type" content="website" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE127Y9MQC"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EE127Y9MQC');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light only;
+      --white:#fafaf8; --off:#f4f1ec; --cream:#ede8e0;
+      --gold:#a07840; --gold-light:#c9a46a; --gold-pale:#f0e6d4;
+      --ink:#1a1714; --mid:#4a4540; --muted:#8a837a;
+      --border:rgba(160,120,64,0.15); --border-med:rgba(160,120,64,0.28);
+      --green:#2d6a4f; --green-pale:#e8f5f0; --teal:#1a6b5e; --red:#c0392b;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:999}
+    a{text-decoration:none;color:inherit}
+    /* HEADER */
+    header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:72px;background:rgba(250,250,248,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .logo{display:flex;align-items:center;gap:14px}
+    .logo-diamond{width:28px;height:28px;border:1.5px solid var(--gold);transform:rotate(45deg);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s}
+    .logo:hover .logo-diamond{background:var(--gold-pale)}
+    .logo-diamond-inner{width:9px;height:9px;background:var(--gold)}
+    .logo-wordmark{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;letter-spacing:.06em;color:var(--ink);line-height:1}
+    .logo-wordmark span{color:var(--gold)}
+    nav{display:flex;align-items:center;gap:36px}
+    nav a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);position:relative;transition:color .2s}
+    nav a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s ease}
+    nav a:hover{color:var(--gold)}
+    nav a:hover::after{right:0}
+    .nav-contact{color:var(--gold)!important;border:1px solid var(--border-med);padding:8px 16px;transition:background .2s!important}
+    .nav-contact::after{display:none!important}
+    .nav-contact:hover{background:var(--gold-pale)!important}
+    .page{padding-top:72px}
+    /* UTILITIES */
+    .eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+    .eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold-light)}
+    .eyebrow.light{color:var(--gold-light)}
+    .eyebrow.light::before{background:var(--gold-light)}
+    /* HERO */
+    .hero{padding:96px 56px 88px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--white) 50%,var(--off) 100%);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .hero-left .eyebrow{margin-bottom:24px}
+    .hero-left h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5.5vw,88px);font-weight:400;line-height:.95;color:var(--ink);letter-spacing:-.02em;margin-bottom:28px}
+    .hero-left h1 em{font-style:italic;color:var(--gold)}
+    .hero-left p{font-size:16px;font-weight:300;color:var(--mid);line-height:1.85;max-width:440px;margin-bottom:32px}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:8px}
+    .hero-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--border-med);color:var(--mid)}
+    .hero-badge.green{border-color:rgba(45,106,79,0.3);color:var(--green);background:var(--green-pale)}
+    .hero-right{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .hero-stat{background:var(--white);padding:24px 28px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;transition:background .2s}
+    .hero-stat:hover{background:var(--off)}
+    .hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--gold);line-height:1}
+    .hero-stat-text h4{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
+    .hero-stat-text p{font-size:12px;font-weight:300;color:var(--muted);line-height:1.55}
+    /* MARQUEE */
+    .mq-wrap{overflow:hidden;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:11px 0;cursor:default}
+    .mq-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+    .mq-wrap:hover .mq-track{animation-play-state:paused}
+    .mq-item{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 36px;border-right:1px solid rgba(255,255,255,.07);white-space:nowrap}
+    .mq-item.hi{color:var(--gold-light)}
+    @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    /* PRODUCTS */
+    .products{padding:96px 56px;border-bottom:1px solid var(--border)}
+    .products-header{margin-bottom:56px}
+    .products-header .eyebrow{margin-bottom:20px}
+    .products-header h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:var(--ink);margin-bottom:14px}
+    .products-header h2 em{font-style:italic;color:var(--gold)}
+    .products-header p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;max-width:560px}
+    .product-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .product-card{background:var(--white);padding:40px 32px;display:flex;flex-direction:column;position:relative}
+    .product-card:hover{background:var(--off)}
+    .product-card.coming-soon{opacity:.72}
+    .product-card-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .product-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--ink);line-height:1;margin-bottom:6px}
+    .product-card h3 em{font-style:italic;color:var(--gold)}
+    .product-card-sub{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+    .product-card p{font-size:13px;font-weight:300;color:var(--mid);line-height:1.8;flex:1;margin-bottom:24px}
+    .product-card-facts{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:24px}
+    .pcf-row{background:var(--white);padding:9px 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px}
+    .product-card:hover .pcf-row{background:var(--off)}
+    .pcf-label{font-weight:500;color:var(--ink)}
+    .pcf-value{font-weight:300;color:var(--mid);text-align:right}
+    .pcf-value.green{color:var(--green);font-weight:400}
+    .product-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border-med);padding:12px 20px;text-align:center;transition:background .2s;display:block}
+    .product-link:hover{background:var(--gold-pale)}
+    .product-link.disabled{color:var(--muted);border-color:var(--border);cursor:default}
+    .product-link.disabled:hover{background:transparent}
+    .coming-badge{position:absolute;top:16px;right:16px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;background:var(--cream);color:var(--muted);padding:4px 10px;border:1px solid var(--border-med)}
+    /* PEPTIDE PROGRAM */
+    .peptide-program{padding:96px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .pp-header{margin-bottom:56px}
+    .pp-header .eyebrow{margin-bottom:20px}
+    .pp-header h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:var(--ink);margin-bottom:14px}
+    .pp-header h2 em{font-style:italic;color:var(--gold)}
+    .pp-header p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;max-width:580px}
+    .pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:48px}
+    .pp-compounds{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .compound-row{background:var(--white);padding:22px 24px;transition:background .2s}
+    .compound-row:hover{background:var(--cream)}
+    .compound-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
+    .compound-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink)}
+    .compound-badge{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px}
+    .badge-glp1{background:var(--green-pale);color:var(--green)}
+    .badge-dual{background:var(--gold-pale);color:var(--gold)}
+    .badge-triple{background:#ede8ff;color:#6a4cab}
+    .compound-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+    .compound-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .compound-meta-item{background:var(--white);padding:10px 12px;text-align:center}
+    .compound-row:hover .compound-meta-item{background:var(--off)}
+    .cmi-val{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--ink)}
+    .cmi-key{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+    .pp-program-steps{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .pp-step{background:var(--white);padding:22px 24px;display:grid;grid-template-columns:36px 1fr;gap:16px;align-items:start}
+    .pp-step-num{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--gold-light)}
+    .pp-step-text h4{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px}
+    .pp-step-text p{font-size:12px;font-weight:300;color:var(--muted);line-height:1.65}
+    .pp-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .pp-proof-item{background:var(--white);padding:24px 20px;text-align:center}
+    .pp-proof-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--gold);margin-bottom:6px}
+    .pp-proof-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    /* AIM TEASER */
+    .aim-teaser{padding:96px 56px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .aim-teaser-left .eyebrow{margin-bottom:20px}
+    .aim-teaser-left h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:var(--ink);line-height:1.05;margin-bottom:20px}
+    .aim-teaser-left h2 em{font-style:italic;color:var(--gold)}
+    .aim-teaser-left p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:12px}
+    .aim-compliance-box{margin-top:24px;padding:18px 22px;border-left:3px solid var(--gold-light);background:var(--gold-pale)}
+    .aim-compliance-box p{font-size:13px;font-weight:300;color:var(--mid);line-height:1.7;font-style:italic}
+    .aim-compliance-box strong{font-style:normal;color:var(--ink)}
+    .aim-teaser-right{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .aim-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:14px 28px;border:1px solid var(--ink);transition:background .25s,border-color .25s}
+    .btn-primary:hover{background:var(--gold);border-color:var(--gold)}
+    .btn-secondary{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:transparent;padding:14px 28px;border:1px solid var(--border-med);transition:background .25s}
+    .btn-secondary:hover{background:var(--gold-pale)}
+    .aim-row{background:var(--white);padding:16px 22px;display:grid;grid-template-columns:2fr 3fr;gap:16px;transition:background .2s}
+    .aim-row:hover{background:var(--off)}
+    .aim-row-label{font-size:13px;font-weight:500;color:var(--ink)}
+    .aim-row-value{font-size:13px;font-weight:300;color:var(--mid)}
+    .aim-row-value.green{color:var(--green);font-weight:400}
+    /* QUALITY */
+    .quality{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--ink)}
+    .quality .eyebrow.light{margin-bottom:20px}
+    .quality h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--white);margin-bottom:14px}
+    .quality h2 em{font-style:italic;color:var(--gold-light)}
+    .quality>p{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.85;max-width:560px;margin-bottom:48px}
+    .quality-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06)}
+    .quality-card{background:rgba(255,255,255,.03);padding:28px 24px}
+    .quality-card-icon{font-size:20px;margin-bottom:14px}
+    .quality-card h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;color:var(--white);margin-bottom:8px}
+    .quality-card p{font-size:12px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:12px}
+    .quality-badge{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,0.3);padding:4px 10px;display:inline-block}
+    /* CONTACT */
+    .contact{padding:96px 56px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .contact-left .eyebrow{margin-bottom:20px}
+    .contact-left h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:var(--ink);margin-bottom:16px}
+    .contact-left h2 em{font-style:italic;color:var(--gold)}
+    .contact-left p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:28px}
+    .contact-details{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+    .contact-detail{font-size:14px;font-weight:300;color:var(--mid)}
+    .contact-detail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .2s}
+    .contact-detail a:hover{border-color:var(--gold)}
+    .contact-right{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .contact-item{background:var(--white);padding:22px 24px;transition:background .2s}
+    .contact-item:hover{background:var(--off)}
+    .contact-item-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .contact-item-value{font-size:14px;font-weight:400;color:var(--ink)}
+    .contact-item-sub{font-size:12px;font-weight:300;color:var(--muted);margin-top:3px}
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:40px 56px;display:flex;align-items:center;justify-content:space-between;background:var(--off)}
+    .footer-left{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted)}
+    .footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+    .footer-right a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--gold);border-bottom:1px solid transparent;transition:border-color .2s}
+    .footer-right a:hover{border-color:var(--gold)}
+    .footer-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    /* ENHANCEMENTS */
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-left.visible{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-right.visible{opacity:1;transform:translateX(0)}
+    .reveal-d1{transition-delay:.12s}.reveal-d2{transition-delay:.24s}.reveal-d3{transition-delay:.36s}.reveal-d4{transition-delay:.48s}
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--ink);border-top:1px solid rgba(160,120,64,.35);padding:13px 56px;display:flex;align-items:center;justify-content:space-between;gap:20px;transform:translateY(100%);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta-msg{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:rgba(255,255,255,.8)}
+    .sticky-cta-msg em{color:var(--gold-light);font-style:italic}
+    .sticky-btns{display:flex;gap:8px;align-items:center;flex-shrink:0}
+    .s-btn-p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:1px solid var(--gold);padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background .2s}
+    .s-btn-p:hover{background:var(--gold-light);border-color:var(--gold-light)}
+    .s-btn-s{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,.4);padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background .2s}
+    .s-btn-s:hover{background:rgba(160,120,64,.1)}
+    .s-dismiss{background:none;border:none;color:rgba(255,255,255,.25);font-size:16px;cursor:pointer;padding:4px 6px;line-height:1;margin-left:4px}
+    .s-dismiss:hover{color:rgba(255,255,255,.6)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .h-anim>*{animation:fadeUp .7s cubic-bezier(.16,1,.3,1) both}
+    .h-anim>*:nth-child(1){animation-delay:.05s}.h-anim>*:nth-child(2){animation-delay:.15s}.h-anim>*:nth-child(3){animation-delay:.25s}.h-anim>*:nth-child(4){animation-delay:.35s}.h-anim>*:nth-child(5){animation-delay:.45s}
+    .pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);position:relative;vertical-align:middle;margin-right:6px}
+    .pulse::after{content:'';position:absolute;inset:-3px;border-radius:50%;background:var(--green);opacity:.4;animation:pl 2s ease-out infinite}
+    @keyframes pl{0%{transform:scale(1);opacity:.4}70%{transform:scale(2.2);opacity:0}100%{transform:scale(1);opacity:0}}
+    .count-up{font-variant-numeric:tabular-nums}
+    .hover-lift{transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease}
+    .hover-lift:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,23,20,.12)}
+    /* RESPONSIVE */
+    @media(max-width:960px){
+      header{padding:0 24px;height:60px}
+      .logo-wordmark{font-size:17px}
+      nav{gap:16px}
+      nav a:not(.nav-contact){font-size:10px;letter-spacing:.12em}
+      .page{padding-top:60px}
+      .hero{grid-template-columns:1fr;padding:60px 24px 48px;gap:40px}
+      .hero-right{display:none}
+      .mq-wrap{padding:9px 0}
+      .products{padding:60px 24px}
+      .product-cards{grid-template-columns:1fr}
+      .peptide-program{padding:60px 24px}
+      .pp-grid{grid-template-columns:1fr;gap:32px}
+      .pp-proof{grid-template-columns:repeat(2,1fr)}
+      .aim-teaser{grid-template-columns:1fr;padding:60px 24px;gap:40px}
+      .quality{padding:60px 24px}
+      .quality-grid{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr;padding:60px 24px;gap:40px}
+      .sticky-cta{padding:12px 20px;flex-wrap:wrap}
+      .sticky-cta-msg{font-size:14px}
+      footer{flex-direction:column;gap:20px;padding:32px 24px;text-align:center}
+      .footer-right{align-items:center}
+    }
+    @media(max-width:600px){
+      .quality-grid{grid-template-columns:1fr}
+      .pp-proof{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* FAQ */
+    .faq-section{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .faq-header{margin-bottom:48px}
+    .faq-header .eyebrow{margin-bottom:16px}
+    .faq-header h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--ink)}
+    .faq-header h2 em{font-style:italic;color:var(--gold)}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .faq-item{background:var(--white);padding:0;border:none;cursor:pointer;text-align:left;width:100%;transition:background .2s;display:block}
+    .faq-item:hover{background:var(--cream)}
+    .faq-item.open{background:var(--gold-pale)}
+    .faq-q{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px;font-weight:500;color:var(--ink);line-height:1.45}
+    .faq-icon{font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .3s;line-height:1;display:inline-block}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.22,1,.36,1)}
+    .faq-item.open .faq-a{max-height:600px}
+    .faq-a-inner{padding:0 28px 22px;font-size:13px;font-weight:300;color:var(--mid);line-height:1.8}
+    .faq-a-inner strong{color:var(--ink);font-weight:500}
+    /* OBJECTION STRIP */
+    .objection-strip{padding:0;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:repeat(3,1fr)}
+    .obj-item{padding:40px 36px;border-right:1px solid rgba(255,255,255,.06)}
+    .obj-item:last-child{border-right:none}
+    .obj-q{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px}
+    .obj-a{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:10px}
+    .obj-detail{font-size:12px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.7}
+    /* ROI BLOCK */
+    .roi-block{padding:80px 56px;border-bottom:1px solid var(--border);background:var(--ink)}
+    .roi-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);display:flex;align-items:center;gap:14px;margin-bottom:20px}
+    .roi-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold-light)}
+    .roi-block h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--white);margin-bottom:12px}
+    .roi-block h2 em{font-style:italic;color:var(--gold-light)}
+    .roi-block>p{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:580px;line-height:1.85;margin-bottom:48px}
+    .roi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);margin-bottom:20px}
+    .roi-cell{background:rgba(255,255,255,.03);padding:28px 20px;text-align:center}
+    .roi-cell-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px}
+    .roi-cell-val{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:var(--gold-light);line-height:1;margin-bottom:6px}
+    .roi-cell-sub{font-size:11px;font-weight:300;color:rgba(255,255,255,.3);line-height:1.5}
+    .roi-cell.hi .roi-cell-val{color:var(--white);font-size:42px}
+    .roi-note{font-size:11px;font-weight:300;color:rgba(255,255,255,.22);font-style:italic;line-height:1.6}
+    /* WHO IT'S FOR */
+    .for-section{padding:72px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .for-section .eyebrow{margin-bottom:16px}
+    .for-section h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);margin-bottom:36px}
+    .for-section h2 em{font-style:italic;color:var(--gold)}
+    .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:24px}
+    .for-card{background:var(--white);padding:28px 24px;transition:background .2s}
+    .for-card:hover{background:var(--gold-pale)}
+    .for-spec{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+    .for-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--ink);margin-bottom:8px}
+    .for-why{font-size:12px;font-weight:300;color:var(--mid);line-height:1.7}
+    .not-for-box{padding:18px 24px;border:1px solid var(--border);background:var(--white);font-size:13px;font-weight:300;color:var(--muted);line-height:1.7}
+    .not-for-box strong{font-weight:500;color:var(--mid)}
+    /* URGENCY BAND */
+    .urgency-band{padding:18px 56px;background:var(--ink);border-bottom:1px solid rgba(160,120,64,.2);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .urg-left{display:flex;flex-direction:column;gap:3px}
+    .urg-main{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--white)}
+    .urg-main strong{color:var(--gold-light)}
+    .urg-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+    /* CRED BAR */
+    .cred-bar{padding:28px 56px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:32px;flex-wrap:wrap;background:var(--white)}
+    .cred-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);flex-shrink:0;white-space:nowrap}
+    .cred-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .cred-badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--border-med);color:var(--mid);background:var(--off);white-space:nowrap}
+    .cred-badge.g{border-color:rgba(45,106,79,.3);color:var(--green);background:var(--green-pale)}
+    /* TESTIMONY */
+    .testimony-section{padding:72px 56px;border-bottom:1px solid var(--border)}
+    .testimony-section .eyebrow{margin-bottom:16px}
+    .testimony-section h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);margin-bottom:36px}
+    .testimony-section h2 em{font-style:italic;color:var(--gold)}
+    .testimony-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .tc{background:var(--white);padding:32px 28px;display:flex;flex-direction:column;gap:14px;transition:background .2s}
+    .tc:hover{background:var(--off)}
+    .tc-quote{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--ink);line-height:1.6;font-style:italic;flex:1;position:relative;padding-top:4px}
+    .tc-quote::before{content:'"';color:var(--gold);font-size:36px;line-height:.4;display:block;margin-bottom:10px;font-style:normal}
+    .tc-name{font-size:13px;font-weight:500;color:var(--ink)}
+    .tc-role{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    .tc-disclaimer{font-size:11px;color:var(--muted);font-style:italic;line-height:1.6;margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
+    @media(max-width:960px){
+      .faq-grid,.for-grid,.testimony-grid{grid-template-columns:1fr}
+      .objection-strip{grid-template-columns:1fr}
+      .roi-grid{grid-template-columns:1fr 1fr}
+      .obj-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
+      .faq-section,.roi-block,.for-section,.testimony-section,.cred-bar,.urgency-band{padding:56px 24px}
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-diamond"><div class="logo-diamond-inner"></div></div>
+      <div class="logo-wordmark">Majestic <span>R&amp;D</span></div>
+    </a>
+    <nav>
+      <a href="aim.html">AIM</a>
+      <a href="peptides.html">Peptides</a>
+      <a href="cbg.html">CBG</a>
+      <a href="mailto:majesticrdinfo@gmail.com" class="nav-contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left h-anim">
+        <div class="eyebrow">Physician Research Supply</div>
+        <h1>Majestic<br><em>R&amp;D</em></h1>
+        <p>Add a CNS-targeted delivery program or GLP-1 peptide supply line to your practice &mdash; with zero facility investment, $0 out-of-pocket financing, and a free practice economics analysis before you commit to anything.</p>
+        <div class="hero-badges">
+          <span class="hero-badge green"><span class="pulse"></span>Licensed Physicians Only</span>
+          <span class="hero-badge green">Non-Sterile AIM Classification</span>
+          <span class="hero-badge">USP-797 Peptide Facility</span>
+          <span class="hero-badge">Independent Lab Verified</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;">
+          <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="btn-primary">Schedule Intro Call →</a>
+          <a href="aim.html" class="btn-secondary">Explore AIM Technology &rarr;</a>
+        </div>
+      </div>
+      <div class="hero-right reveal-right">
+        <div class="hero-stat">
+          <div class="hero-stat-num count-up" data-t="3" data-dec="0">3</div>
+          <div class="hero-stat-text"><h4>Distinct Product Lines</h4><p>AIM intranasal delivery &middot; GLP peptide program &middot; Topical CBG. Each physician-facing, each independently operated.</p></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num count-up" data-t="15" data-dec="0">15</div>
+          <div class="hero-stat-text"><h4>Compounds Tested with AIM</h4><p>Published CNS research across all 15. Full citation reference available to qualified physicians.</p></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num count-up" data-t="99.8" data-dec="1" data-suf="%">99.8%</div>
+          <div class="hero-stat-text"><h4>Average Peptide Purity</h4><p>USP-797 sterile facility &middot; ISO Class 5 &middot; Independent third-party lab verification on every lot.</p></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num count-up" data-t="20" data-dec="0">20</div>
+          <div class="hero-stat-text"><h4>Days to Operational</h4><p>From intro call to inventory in hand. PNC Healthcare financing covers starter inventory &mdash; $0 out of pocket.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="mq-wrap">
+      <div class="mq-track">
+        <span class="mq-item hi">Non-sterile topical &mdash; AIM</span><span class="mq-item">No USP-797 required</span><span class="mq-item">Physician-controlled vehicle</span><span class="mq-item hi">USP-797 Peptide Facility</span><span class="mq-item">ISO Class 5 Sterile &middot; South Carolina</span><span class="mq-item">99.8% Avg Purity &middot; 3rd-party verified</span><span class="mq-item hi">TrustPointe &amp; Chromate COA</span><span class="mq-item">Licensed Physicians Only</span><span class="mq-item">Every lot independently tested</span><span class="mq-item hi">15 compounds tested with AIM</span><span class="mq-item">Olfactory &amp; Trigeminal pathway</span><span class="mq-item">Direct CNS delivery &middot; Bypasses BBB</span><span class="mq-item hi">PNC Healthcare Financing Available</span><span class="mq-item">Structured onboarding included</span>
+        <span class="mq-item hi">Non-sterile topical &mdash; AIM</span><span class="mq-item">No USP-797 required</span><span class="mq-item">Physician-controlled vehicle</span><span class="mq-item hi">USP-797 Peptide Facility</span><span class="mq-item">ISO Class 5 Sterile &middot; South Carolina</span><span class="mq-item">99.8% Avg Purity &middot; 3rd-party verified</span><span class="mq-item hi">TrustPointe &amp; Chromate COA</span><span class="mq-item">Licensed Physicians Only</span><span class="mq-item">Every lot independently tested</span><span class="mq-item hi">15 compounds tested with AIM</span><span class="mq-item">Olfactory &amp; Trigeminal pathway</span><span class="mq-item">Direct CNS delivery &middot; Bypasses BBB</span><span class="mq-item hi">PNC Healthcare Financing Available</span><span class="mq-item">Structured onboarding included</span>
+      </div>
+    </div>
+
+
+    <!-- CREDENTIAL BAR -->
+    <div class="cred-bar reveal">
+      <span class="cred-label">Verified by</span>
+      <div class="cred-badges">
+        <span class="cred-badge g">USP-797 Certified</span>
+        <span class="cred-badge g">ISO Class 5 Sterile</span>
+        <span class="cred-badge g">Non-Sterile AIM &mdash; USP-795</span>
+        <span class="cred-badge">TrustPointe Analytics COA</span>
+        <span class="cred-badge">Chromate COA</span>
+        <span class="cred-badge">PNC Healthcare Financing</span>
+        <span class="cred-badge">B2B &middot; Licensed Physicians Only</span>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section class="products reveal">
+      <div class="products-header">
+        <div class="eyebrow">Product Lines</div>
+        <h2>Three products. <em>One physician-facing platform.</em></h2>
+        <p>Each product operates independently. Physicians select what fits their practice &mdash; delivery technology, injectable peptides, or topical cannabinoids. No bundling required.</p>
+      </div>
+      <div class="product-cards">
+        <div class="product-card hover-lift">
+          <div class="product-card-tag">Delivery Technology</div>
+          <h3>AIM<br><em>Therapeutix</em></h3>
+          <div class="product-card-sub">Advanced Intranasal Medium</div>
+          <p>A non-Newtonian intranasal delivery vehicle that delivers APIs directly to the CNS via the olfactory and trigeminal nerve pathways &mdash; bypassing the blood-brain barrier. Non-sterile classification. No USP-797 required. Physician-controlled.</p>
+          <div class="product-card-facts">
+            <div class="pcf-row"><span class="pcf-label">Classification</span><span class="pcf-value green">Non-sterile topical</span></div>
+            <div class="pcf-row"><span class="pcf-label">Facility needed</span><span class="pcf-value green">None &mdash; no USP-797</span></div>
+            <div class="pcf-row"><span class="pcf-label">CNS pathway</span><span class="pcf-value">Olfactory + trigeminal</span></div>
+            <div class="pcf-row"><span class="pcf-label">50 mL vial</span><span class="pcf-value">$500 &middot; 200 aqueous doses</span></div>
+            <div class="pcf-row"><span class="pcf-label">2&times;50 mL set</span><span class="pcf-value">$900 &middot; 400 aqueous doses</span></div>
+          </div>
+          <a href="aim.html" class="product-link">Explore AIM &rarr;</a>
+        </div>
+        <div class="product-card hover-lift">
+          <div class="product-card-tag">GLP Peptide Program</div>
+          <h3>Majestic<br><em>Peptides</em></h3>
+          <div class="product-card-sub">Injectable-Grade GLP-1 Program</div>
+          <p>Semaglutide, Tirzepatide, and Retatrutide &mdash; manufactured in a USP-797 certified, ISO Class 5 sterile facility in South Carolina, tested by independent labs, and shipped directly to your practice. PNC Healthcare financing available.</p>
+          <div class="product-card-facts">
+            <div class="pcf-row"><span class="pcf-label">Facility</span><span class="pcf-value green">USP-797 &middot; ISO Class 5 &middot; SC</span></div>
+            <div class="pcf-row"><span class="pcf-label">Purity</span><span class="pcf-value green">99.8% avg &middot; 3rd-party verified</span></div>
+            <div class="pcf-row"><span class="pcf-label">Semaglutide</span><span class="pcf-value">$262.50 / 30 mg vial</span></div>
+            <div class="pcf-row"><span class="pcf-label">Tirzepatide</span><span class="pcf-value">$750.00 / 200 mg vial</span></div>
+            <div class="pcf-row"><span class="pcf-label">Launch timeline</span><span class="pcf-value">Structured onboarding</span></div>
+          </div>
+          <a href="peptides.html" class="product-link">Explore Peptides &rarr;</a>
+        </div>
+        <div class="product-card coming-soon hover-lift">
+          <div class="coming-badge">Coming Soon</div>
+          <div class="product-card-tag">Topical Cannabinoid</div>
+          <h3>Majestic<br><em>CBG</em></h3>
+          <div class="product-card-sub">Topical Cannabigerol Formulation</div>
+          <p>Physician-grade topical CBG for anti-inflammatory and neuroprotective applications. Supplied directly to licensed physicians. Full product details and clinical documentation in development.</p>
+          <div class="product-card-facts">
+            <div class="pcf-row"><span class="pcf-label">Format</span><span class="pcf-value">Topical formulation</span></div>
+            <div class="pcf-row"><span class="pcf-label">Classification</span><span class="pcf-value">Physician-supplied</span></div>
+            <div class="pcf-row"><span class="pcf-label">Availability</span><span class="pcf-value">Contact for timeline</span></div>
+          </div>
+          <span class="product-link disabled">Details Coming Soon</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OBJECTION HANDLER -->
+    <div class="objection-strip reveal">
+      <div class="obj-item">
+        <div class="obj-q">Objection 01 &mdash; Legality</div>
+        <div class="obj-a">Is this actually legal for my practice?</div>
+        <div class="obj-detail">Yes. AIM is a non-sterile topical classified under USP-795 &mdash; not a drug, not a prescription product. Peptides are supplied B2B under RUO designation. You determine use under your own professional license, exactly as you do with bacteriostatic water or any compounding vehicle.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Objection 02 &mdash; Overhead</div>
+        <div class="obj-a">Do I need a sterile facility or new equipment?</div>
+        <div class="obj-detail">No. AIM requires zero facility investment &mdash; it&rsquo;s non-sterile classification. Peptides ship from an ISO Class 5 facility in South Carolina. You receive inventory, compliance documentation, and training. Standard Luer-lock nasal atomizer is the only required equipment for AIM.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Objection 03 &mdash; Cashflow</div>
+        <div class="obj-a">What&rsquo;s my out-of-pocket to get started?</div>
+        <div class="obj-detail">$0 out of pocket via PNC Healthcare financing. $30,000 starter inventory at 10% APR over 5 years &mdash; approximately $650/month. No personal credit check. No collateral. One-page application. Program revenue is structured to cover the payment at operational volume.</div>
+      </div>
+    </div>
+
+    <!-- PEPTIDE PROGRAM DETAIL -->
+    <section class="peptide-program reveal" id="peptide-program">
+      <div class="pp-header">
+        <div class="eyebrow">GLP Peptide Program</div>
+        <h2>Three compounds. <em>The full metabolic spectrum.</em></h2>
+        <p>USP-797 sterile, independently verified, shipped directly to your practice. PNC Healthcare financing available. Contact us for onboarding timeline.</p>
+      </div>
+      <div class="pp-grid">
+        <div class="pp-compounds">
+          <div class="compound-row">
+            <div class="compound-top">
+              <div><div class="compound-name">Semaglutide</div><div class="compound-tag">GLP-1 &middot; Weight management &amp; glycemic control</div></div>
+              <span class="compound-badge badge-glp1">GLP-1</span>
+            </div>
+            <div class="compound-meta">
+              <div class="compound-meta-item"><div class="cmi-val">$8.75</div><div class="cmi-key">Per mg</div></div>
+              <div class="compound-meta-item"><div class="cmi-val">30 mg</div><div class="cmi-key">Vial size</div></div>
+              <div class="compound-meta-item"><div class="cmi-val">$262.50</div><div class="cmi-key">Per vial</div></div>
+            </div>
+          </div>
+          <div class="compound-row">
+            <div class="compound-top">
+              <div><div class="compound-name">Tirzepatide</div><div class="compound-tag">GIP/GLP-1 &middot; Dual agonist &middot; Superior metabolic outcomes</div></div>
+              <span class="compound-badge badge-dual">Dual</span>
+            </div>
+            <div class="compound-meta">
+              <div class="compound-meta-item"><div class="cmi-val">$3.75</div><div class="cmi-key">Per mg</div></div>
+              <div class="compound-meta-item"><div class="cmi-val">200 mg</div><div class="cmi-key">Vial size</div></div>
+              <div class="compound-meta-item"><div class="cmi-val">$750.00</div><div class="cmi-key">Per vial</div></div>
+            </div>
+          </div>
+          <div class="compound-row">
+            <div class="compound-top">
+              <div><div class="compound-name">Retatrutide</div><div class="compound-tag">GIP/GLP-1/Glucagon &middot; Triple agonist &middot; Next-gen pipeline</div></div>
+              <span class="compound-badge badge-triple">Triple</span>
+            </div>
+            <div class="compound-meta">
+              <div class="compound-meta-item"><div class="cmi-val">$8.75</div><div class="cmi-key">Per mg</div></div>
+              <div class="compound-meta-item"><div class="cmi-val">60 mg</div><div class="cmi-key">Vial size</div></div>
+              <div class="compound-meta-item"><div class="cmi-val">$525.00</div><div class="cmi-key">Per vial</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="pp-program-steps">
+          <div class="pp-step">
+            <div class="pp-step-num">01</div>
+            <div class="pp-step-text"><h4>Intro Call &rarr; Free Profit Snapshot</h4><p>15 minutes. We walk through your practice profile, compounds that fit, and answer any clinical or compliance questions. No commitment required.</p></div>
+          </div>
+          <div class="pp-step">
+            <div class="pp-step-num">02</div>
+            <div class="pp-step-text"><h4>$0 Out of Pocket via PNC Healthcare</h4><p>One-page application. $30,000 at 10% APR over 5 years &mdash; ~$650/month. No personal credit check, no collateral. Approval in approx. one week.</p></div>
+          </div>
+          <div class="pp-step">
+            <div class="pp-step-num">03</div>
+            <div class="pp-step-text"><h4>Inventory Ships &middot; Training Starts</h4><p>Ships from South Carolina within 5&ndash;7 days of funding. Two 2-hour training sessions included. Full compliance documentation provided.</p></div>
+          </div>
+          <div class="pp-step">
+            <div class="pp-step-num">04</div>
+            <div class="pp-step-text"><h4>First Order &mdash; Inventory In Hand</h4><p>Inventory in hand, compliance documentation complete, training complete. Program structured for operational readiness from day one.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="pp-proof">
+        <div class="pp-proof-item"><div class="pp-proof-num count-up" data-t="99.8" data-dec="1" data-suf="%">99.8%</div><div class="pp-proof-lbl">Avg purity &middot; USP-797 sterile</div></div>
+        <div class="pp-proof-item"><div class="pp-proof-num count-up" data-t="20" data-dec="0">20</div><div class="pp-proof-lbl">Structured onboarding</div></div>
+        <div class="pp-proof-item"><div class="pp-proof-num">$0</div><div class="pp-proof-lbl">PNC Healthcare financing available</div></div>
+      </div>
+      <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="btn-primary">Schedule Intro Call &rarr;</a>
+        <a href="peptides.html" class="btn-secondary">Full Peptide Program &rarr;</a>
+      </div>
+    </section>
+
+    <!-- AIM TEASER -->
+    <section class="aim-teaser reveal" id="aim-section">
+      <div class="aim-teaser-left reveal-left">
+        <div class="eyebrow">AIM Therapeutix</div>
+        <h2>Direct CNS delivery. <em>No needle. No sterile facility.</em></h2>
+        <p>AIM is a non-Newtonian intranasal medium that delivers APIs via the olfactory and trigeminal nerve pathways &mdash; bypassing the blood-brain barrier entirely. The physician determines what to use it with, under their own professional license.</p>
+        <p>Non-sterile classification. No USP-797 required. Supplied directly to licensed physicians as a standalone delivery vehicle &mdash; the same model as bacteriostatic water.</p>
+        <p>Published research documents improved CNS bioavailability versus the subcutaneous route. Real-world observational reports across 10 de-identified cases spanning TBI, PTSD, post-stroke recovery, and inflammatory conditions describe consistent tolerance and rapid onset. Full reference documents available to qualified physician inquiries.</p>
+        <div class="aim-compliance-box">
+          <p><strong>Compliance position:</strong> AIM is a non-sterile compounding medium for topical intranasal use. Not a drug. Not a prescription product. All therapeutic use governed by physician license.</p>
+        </div>
+        <div class="aim-cta">
+          <a href="aim.html" class="btn-primary">Full AIM Page &rarr;</a>
+          <a href="aim_clinical_workflow.html" class="btn-secondary">Clinical Workflow &rarr;</a>
+        </div>
+        <div style="margin-top:16px;padding:18px 22px;border:1px solid var(--border-med);background:var(--off);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+          <div>
+            <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Physician Reference Documents</div>
+            <div style="font-size:13px;font-weight:300;color:var(--mid);">Compound Compatibility Whitepaper &middot; Utilization Summary &middot; Clinical Workflow Guide</div>
+          </div>
+          <a href="aim.html#research" style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border-med);padding:10px 18px;white-space:nowrap;transition:background .2s;text-decoration:none;" onmouseover="this.style.background='var(--gold-pale)'" onmouseout="this.style.background='transparent'">Request Access &rarr;</a>
+        </div>
+      </div>
+      <div class="aim-teaser-right reveal-right">
+        <div class="aim-row"><div class="aim-row-label">Classification</div><div class="aim-row-value green">Non-sterile topical &mdash; USP-795</div></div>
+        <div class="aim-row"><div class="aim-row-label">Facility required</div><div class="aim-row-value green">None &mdash; no USP-797</div></div>
+        <div class="aim-row"><div class="aim-row-label">CNS delivery pathway</div><div class="aim-row-value">Olfactory + trigeminal &rarr; bypasses BBB</div></div>
+        <div class="aim-row"><div class="aim-row-label">AIM per dose</div><div class="aim-row-value">0.25 mL aqueous &middot; 0.50 mL lyophilized</div></div>
+        <div class="aim-row"><div class="aim-row-label">Delivered per dose</div><div class="aim-row-value">0.50 mL &middot; 0.25 mL per nostril</div></div>
+        <div class="aim-row"><div class="aim-row-label">50 mL vial</div><div class="aim-row-value">$500 &middot; 200 aqueous / 100 lyophilized doses</div></div>
+        <div class="aim-row"><div class="aim-row-label">2&times;50 mL set</div><div class="aim-row-value">$900 &middot; 400 aqueous / 200 lyophilized doses</div></div>
+        <div class="aim-row"><div class="aim-row-label">Compounds tested</div><div class="aim-row-value">15 &middot; all with published CNS research</div></div>
+        <div class="aim-row"><div class="aim-row-label">Physician controls</div><div class="aim-row-value">Everything &mdash; compound, dose, concentration</div></div>
+      </div>
+    </section>
+
+    <!-- QUALITY -->
+    <section class="quality reveal">
+      <div class="eyebrow light">Quality &amp; Compliance</div>
+      <h2>Tested at dispatch. <em>Verifiable by you.</em></h2>
+      <p>Every peptide lot is independently tested and publicly verifiable. The AIM vehicle is non-sterile classified &mdash; simplified compliance with no facility burden. Both product lines ship to licensed physician practices only.</p>
+      <div class="quality-grid">
+        <div class="quality-card hover-lift">
+          <div class="quality-card-icon">&#127981;</div>
+          <h4>USP-797 Peptide Facility</h4>
+          <p>ISO Class 5 sterile environment in South Carolina. Injectable-grade preparation. Lab visits available &mdash; open door policy.</p>
+          <span class="quality-badge">Open Door Policy</span>
+        </div>
+        <div class="quality-card hover-lift">
+          <div class="quality-card-icon">&#128300;</div>
+          <h4>Every Lot, Independent Testing</h4>
+          <p>TrustPointe Analytics (Dorr, MI) and Chromate. COA confirms identity, purity, and quantity. QR code links to the lab&rsquo;s own portal &mdash; not to us.</p>
+          <span class="quality-badge">99.75&ndash;99.85% Purity</span>
+        </div>
+        <div class="quality-card hover-lift">
+          <div class="quality-card-icon">&sect;</div>
+          <h4>AIM &mdash; Non-Sterile Classification</h4>
+          <p>USP-795 governs AIM, not 797. No sterile facility required. Physician-controlled vehicle with a fully simplified compliance profile.</p>
+          <span class="quality-badge">No USP-797 Required</span>
+        </div>
+        <div class="quality-card hover-lift">
+          <div class="quality-card-icon">&#128203;</div>
+          <h4>Full Compliance Toolkit</h4>
+          <p>Informed consent templates, lot tracking logs, adverse event forms, reconstitution cards, and EMR guidance included with peptide starter package.</p>
+          <span class="quality-badge">Included with Starter</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- URGENCY BAND -->
+    <div class="urgency-band">
+      <div class="urg-left">
+        <div class="urg-main">Currently onboarding physician practices. <strong>Allocation is limited during initial rollout.</strong></div>
+        <div class="urg-sub">Intro call &middot; No commitment &middot; Free practice analysis &middot; Response within 1 business day</div>
+      </div>
+      <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="s-btn-p">Book Your Call &rarr;</a>
+    </div>
+
+
+    <!-- FAQ -->
+    <section class="faq-section reveal" id="faq">
+      <div class="faq-header">
+        <div class="eyebrow">Common Questions</div>
+        <h2>Every question a physician <em>actually asks.</em></h2>
+        <p>Answered directly. No sales language. If your question isn&rsquo;t here, email us &mdash; we respond within one business day.</p>
+      </div>
+      <div class="faq-grid">
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is AIM the same as a compounded drug?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">No. AIM is a delivery vehicle &mdash; the same conceptual model as bacteriostatic water. It is not a drug, not a prescription product, and not a controlled substance. You purchase AIM and independently source or prescribe whatever compound you choose to use with it. AIM is what delivers it.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What compounds can I use with AIM?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Any aqueous-compatible compound under your professional license. We have tested 15 compounds and have published peer-reviewed research supporting CNS delivery for all 15 &mdash; including semaglutide, NAC, CBG, insulin, vitamin C, melatonin, NAD+, and more. You determine compound, dose, and concentration.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Do I need a sterile facility or USP-797 compliance for AIM?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">No. AIM is classified as a non-sterile compounding medium under USP-795 &mdash; not USP-797. No clean room, no sterile facility, no additional facility investment. Standard office protocols apply.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How does the peptide program work financially?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">$0 out of pocket via PNC Healthcare financing. $30,000 starter inventory at 10% APR over 5 years (~$650/month). No personal credit check, no collateral, one-page application. We build a practice-specific economics analysis before you commit to anything.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What&rsquo;s the difference between AIM and injectable peptide delivery?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">AIM delivers compounds via the olfactory and trigeminal nerve pathways &mdash; direct CNS access bypassing the blood-brain barrier and first-pass metabolism. No needle, no sterile facility, no sharps. Injectables require subcutaneous administration, USP-797 compliance for compounding, and sharps disposal. AIM eliminates all three.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How do I verify the purity of the peptides?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Every lot is tested by TrustPointe Analytics or Chromate &mdash; independent third-party labs. The COA includes a QR code that links directly to the lab&rsquo;s own verification portal, not our website. You can verify identity, purity, and quantity without taking our word for it.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What specialties is this best suited for?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">Integrative medicine, functional medicine, neurology, pain management, psychiatry, and anti-aging/longevity practices are the strongest fits. AIM&rsquo;s CNS delivery pathway makes it particularly compelling for neurological and psychiatric applications. Peptides fit any cash-pay weight management or metabolic practice.</div></div>
+        </button>
+        <button class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What&rsquo;s the onboarding process look like?<span class="faq-icon">+</span></div>
+          <div class="faq-a"><div class="faq-a-inner">15-minute intro call &rarr; practice economics analysis delivered &rarr; PNC Healthcare financing application (one page, ~one week) &rarr; inventory ships from South Carolina within 5&ndash;7 days of funding &rarr; two 2-hour training sessions &rarr; full compliance documentation included. Program fully operational within 2&ndash;3 weeks of your call.</div></div>
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact reveal" id="contact">
+      <div class="contact-left">
+        <div class="eyebrow">Physician Inquiries</div>
+        <h2>15 minutes. <em>Free practice analysis. No commitment.</em></h2>
+        <p>All products are supplied to licensed physicians only. Contact us for AIM ordering, peptide program onboarding, or to request the full citation reference document for any compound.</p>
+        <div class="contact-details">
+          <div class="contact-detail">&#128231; <a href="mailto:majesticrdinfo@gmail.com">majesticrdinfo@gmail.com</a></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="btn-primary">Schedule Intro Call →</a>
+          <a href="mailto:majesticrdinfo@gmail.com" class="btn-secondary">Email Inquiry &rarr;</a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="contact-item">
+          <div class="contact-item-label">AIM &mdash; Delivery Technology</div>
+          <div class="contact-item-value">Order inquiry &middot; Clinical workflow &middot; Citation documents</div>
+          <div class="contact-item-sub">50 mL vial $500 &middot; 2&times;50 mL $900 &middot; Licensed physician verification required</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">Peptide Program &mdash; GLP-1</div>
+          <div class="contact-item-value">Intro call &middot; Free practice analysis &middot; Onboarding</div>
+          <div class="contact-item-sub">Semaglutide &middot; Tirzepatide &middot; Retatrutide &middot; PNC Healthcare financing available</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">CBG &mdash; Topical</div>
+          <div class="contact-item-value">Coming soon &mdash; contact for timeline</div>
+          <div class="contact-item-sub">Physician-grade topical cannabigerol &middot; Details in development</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">&copy; 2026 Majestic R&amp;D, LLC. All rights reserved. Maryland.</div>
+    <div class="footer-right">
+      <a href="mailto:majesticrdinfo@gmail.com">majesticrdinfo@gmail.com</a>
+      <div class="footer-note">Licensed Physician Access Only</div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-cta-msg">Free practice analysis. <em>15 minutes. No commitment.</em></div>
+    <div class="sticky-btns">
+      <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="s-btn-p">Schedule Intro Call →</a>
+      <a href="mailto:majesticrdinfo@gmail.com" class="s-btn-s">Email Us &rarr;</a>
+      <button class="s-dismiss" id="s-dismiss" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.22,rootMargin:'0px 0px -160px 0px'});
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+      const sc=document.getElementById('sticky-cta');
+      if(sc){let d=false;window.addEventListener('scroll',()=>{if(!d)sc.classList.toggle('show',window.scrollY>window.innerHeight*.75);},{passive:true});const sd=document.getElementById('s-dismiss');if(sd)sd.addEventListener('click',()=>{d=true;sc.classList.remove('show');});}
+      function countUp(el){const t=parseFloat(el.dataset.t),pre=el.dataset.pre||'',suf=el.dataset.suf||'',dec=+(el.dataset.dec||0),dur=1400,s=performance.now(),ease=p=>1-Math.pow(1-p,3);(function fr(n){const p=Math.min((n-s)/dur,1);el.textContent=pre+(t*ease(p)).toFixed(dec)+suf;p<1&&requestAnimationFrame(fr);})(s);}
+      const co=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done=1;countUp(e.target);}}),{threshold:.5});
+      document.querySelectorAll('.count-up').forEach(el=>co.observe(el));
+      const secs=document.querySelectorAll('section[id]'),navs=document.querySelectorAll('nav a');
+      window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});navs.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active');});},{passive:true});
+
+    // FAQ accordion
+    function toggleFaq(el){
+      const wasOpen = el.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+      if(!wasOpen) el.classList.add('open');
+    }
+
+    })();
+  </script>
+
+</body>
+</html>

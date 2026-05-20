@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive docs — never commit
+docs/contracts/
+docs/compliance/
+docs/terms/
+*.pdf
+
+# Editor
+.vscode/
+.idea/
