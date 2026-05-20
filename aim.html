@@ -846,7 +846,7 @@
               <button class="rm-submit" onclick="submitWhitepaperRequest()">Request Whitepaper →</button>
             </div>
             <div id="wp-success" class="rm-success">
-              <strong>Request received.</strong> We'll verify your license and send the document to your email. Typically within one business day. If you have questions in the meantime, reach us at <a href="mailto:majesticrdinfo@gmail.com" style="color:var(--gold-light);">majesticrdinfo@gmail.com</a>.
+              <strong>Got it — a real person will review this and be in touch within 1 business day.</strong> We'll send the Whitepaper directly to your email once we've had a chance to connect the dots on our end. Questions in the meantime? <a href="mailto:majesticrdinfo@gmail.com" style="color:var(--gold-light);">majesticrdinfo@gmail.com</a>
             </div>
           </div>
         </div>
@@ -879,7 +879,7 @@
               <button class="rm-submit" onclick="submitUtilizationRequest()">Request Utilization Summary →</button>
             </div>
             <div id="us-success" class="rm-success">
-              <strong>Request received.</strong> We'll verify your license and send the document to your email. Typically within one business day. Reach us at <a href="mailto:majesticrdinfo@gmail.com" style="color:var(--gold-light);">majesticrdinfo@gmail.com</a> with any questions.
+              <strong>Got it — a real person will review this and be in touch within 1 business day.</strong> We'll send the Utilization Summary directly to your email once we've had a chance to look things over. Questions in the meantime? <a href="mailto:majesticrdinfo@gmail.com" style="color:var(--gold-light);">majesticrdinfo@gmail.com</a>
             </div>
           </div>
         </div>
@@ -1093,6 +1093,50 @@
       window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});navs.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active');});},{passive:true});
 
     function toggleFaq(el){var was=el.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)el.classList.add('open');}
+
+    function submitWhitepaperRequest(){
+      var name=document.getElementById('wp-name').value.trim();
+      var email=document.getElementById('wp-email').value.trim();
+      var practice=document.getElementById('wp-practice').value.trim();
+      var specialty=document.getElementById('wp-specialty').value.trim();
+      if(!name||!email){
+        alert('Please enter your name and email address.');
+        return;
+      }
+      var subject=encodeURIComponent('AIM Whitepaper Request — '+name);
+      var body=encodeURIComponent(
+        'Document Requested: Compound Compatibility Whitepaper\n\n'+
+        'Name: '+name+'\n'+
+        'Email: '+email+'\n'+
+        'Practice: '+(practice||'—')+'\n'+
+        'Specialty: '+(specialty||'—')
+      );
+      window.location.href='mailto:majesticrdinfo@gmail.com?subject='+subject+'&body='+body;
+      document.getElementById('wp-form').style.display='none';
+      document.getElementById('wp-success').style.display='block';
+    }
+
+    function submitUtilizationRequest(){
+      var name=document.getElementById('us-name').value.trim();
+      var email=document.getElementById('us-email').value.trim();
+      var practice=document.getElementById('us-practice').value.trim();
+      var specialty=document.getElementById('us-specialty').value.trim();
+      if(!name||!email){
+        alert('Please enter your name and email address.');
+        return;
+      }
+      var subject=encodeURIComponent('AIM Utilization Summary Request — '+name);
+      var body=encodeURIComponent(
+        'Document Requested: Physician Utilization Summary\n\n'+
+        'Name: '+name+'\n'+
+        'Email: '+email+'\n'+
+        'Practice: '+(practice||'—')+'\n'+
+        'Specialty: '+(specialty||'—')
+      );
+      window.location.href='mailto:majesticrdinfo@gmail.com?subject='+subject+'&body='+body;
+      document.getElementById('us-form').style.display='none';
+      document.getElementById('us-success').style.display='block';
+    }
 
     })();
   </script>
