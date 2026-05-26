@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Majestic R&D</title>
+  <meta name="description" content="Majestic R&D supplies licensed physicians with research-grade compounds and proprietary delivery technology. Learn who we are, why we exist, and the people behind the work." />
+  <meta name="color-scheme" content="light only" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE127Y9MQC"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EE127Y9MQC');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light only;
+      --white:#fafaf8; --off:#f4f1ec; --cream:#ede8e0;
+      --gold:#a07840; --gold-light:#c9a46a; --gold-pale:#f0e6d4;
+      --ink:#1a1714; --mid:#4a4540; --muted:#8a837a;
+      --border:rgba(160,120,64,0.15); --border-med:rgba(160,120,64,0.28);
+      --green:#2d6a4f; --green-pale:#e8f5f0;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:999}
+    a{text-decoration:none;color:inherit}
+    header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:72px;background:rgba(250,250,248,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .logo{display:flex;align-items:center;gap:14px}
+    .logo-diamond{width:28px;height:28px;border:1.5px solid var(--gold);transform:rotate(45deg);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s}
+    .logo:hover .logo-diamond{background:var(--gold-pale)}
+    .logo-diamond-inner{width:9px;height:9px;background:var(--gold)}
+    .logo-wordmark{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;letter-spacing:.06em;color:var(--ink);line-height:1}
+    .logo-wordmark span{color:var(--gold)}
+    nav{display:flex;align-items:center;gap:36px}
+    nav a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);position:relative;transition:color .2s}
+    nav a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s ease}
+    nav a:hover{color:var(--gold)}
+    nav a:hover::after{right:0}
+    nav a.active{color:var(--gold)}
+    nav a.active::after{right:0}
+    .nav-contact{color:var(--gold)!important;border:1px solid var(--border-med);padding:8px 16px;transition:background .2s!important}
+    .nav-contact::after{display:none!important}
+    .nav-contact:hover{background:var(--gold-pale)!important}
+    .page{padding-top:72px}
+    .eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+    .eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold-light)}
+    .eyebrow.light{color:var(--gold-light)}
+    .eyebrow.light::before{background:var(--gold-light)}
+    .btn-primary{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--white);background:var(--ink);padding:14px 28px;border:1px solid var(--ink);transition:background .25s,border-color .25s;display:inline-block}
+    .btn-primary:hover{background:var(--gold);border-color:var(--gold)}
+    .btn-secondary{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:transparent;padding:14px 28px;border:1px solid var(--border-med);transition:background .25s;display:inline-block}
+    .btn-secondary:hover{background:var(--gold-pale)}
+    .mq-wrap{overflow:hidden;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06);padding:11px 0;cursor:default}
+    .mq-track{display:flex;width:max-content;animation:mq 36s linear infinite}
+    .mq-wrap:hover .mq-track{animation-play-state:paused}
+    .mq-item{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 36px;border-right:1px solid rgba(255,255,255,.07);white-space:nowrap}
+    .mq-item.hi{color:var(--gold-light)}
+    @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .hero{padding:96px 56px 80px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--white) 55%,var(--off) 100%)}
+    .hero-eyebrow{margin-bottom:24px}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,5vw,80px);font-weight:400;line-height:1.1;color:var(--ink);letter-spacing:-.02em;margin-bottom:28px;max-width:760px}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-body{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:48px}
+    .hero-left p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.9;margin-bottom:16px}
+    .hero-left p strong{font-weight:500;color:var(--ink)}
+    .hero-right{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .fact-row{background:var(--white);padding:18px 24px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start;transition:background .2s}
+    .fact-row:hover{background:var(--off)}
+    .fact-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding-top:2px}
+    .fact-value{font-size:13px;font-weight:300;color:var(--mid);line-height:1.7}
+    .fact-value strong{font-weight:500;color:var(--ink)}
+    .what{padding:80px 56px;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.06)}
+    .what-inner{max-width:840px}
+    .what .eyebrow{margin-bottom:28px}
+    .what h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.5vw,50px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:32px}
+    .what h2 em{font-style:italic;color:var(--gold-light)}
+    .what-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    .what-col p{font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.9;margin-bottom:14px}
+    .what-col p strong{font-weight:500;color:rgba(255,255,255,.8)}
+    .what-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .what-tag{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(160,120,64,.3);padding:5px 12px}
+    .team{padding:96px 56px;border-bottom:1px solid var(--border)}
+    .team-header{margin-bottom:64px}
+    .team-header .eyebrow{margin-bottom:20px}
+    .team-header h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--ink);margin-bottom:14px}
+    .team-header h2 em{font-style:italic;color:var(--gold)}
+    .team-header p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;max-width:560px}
+    .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .team-card{background:var(--white);padding:48px 40px;transition:background .2s}
+    .team-card:hover{background:var(--off)}
+    .team-card-role{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .team-card-name{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);line-height:1;margin-bottom:4px}
+    .team-card-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+    .team-card-divider{height:1px;background:var(--border);margin-bottom:24px}
+    .team-card p{font-size:14px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:14px}
+    .team-card p strong{font-weight:500;color:var(--ink)}
+    .team-card-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+    .team-tag{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--border-med);color:var(--mid)}
+    .team-tag.green{border-color:rgba(45,106,79,.3);color:var(--green);background:var(--green-pale)}
+    .team-card-link{margin-top:28px}
+    .team-card-link a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--border-med);padding-bottom:2px;transition:border-color .2s}
+    .team-card-link a:hover{border-color:var(--gold)}
+    .infra{padding:96px 56px;border-bottom:1px solid var(--border);background:var(--off)}
+    .infra-header{margin-bottom:56px}
+    .infra-header .eyebrow{margin-bottom:20px}
+    .infra-header h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--ink);margin-bottom:14px}
+    .infra-header h2 em{font-style:italic;color:var(--gold)}
+    .infra-header p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;max-width:540px}
+    .infra-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .infra-card{background:var(--white);padding:28px 24px;transition:background .2s}
+    .infra-card:hover{background:var(--cream)}
+    .infra-card-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+    .infra-card h4{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.1}
+    .infra-card p{font-size:12px;font-weight:300;color:var(--muted);line-height:1.75}
+    .contact{padding:96px 56px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .contact-left .eyebrow{margin-bottom:20px}
+    .contact-left h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--ink);margin-bottom:16px}
+    .contact-left h2 em{font-style:italic;color:var(--gold)}
+    .contact-left p{font-size:15px;font-weight:300;color:var(--mid);line-height:1.85;margin-bottom:28px}
+    .contact-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .contact-right{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .contact-item{background:var(--white);padding:22px 24px;transition:background .2s}
+    .contact-item:hover{background:var(--off)}
+    .contact-item-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .contact-item-value{font-size:14px;font-weight:400;color:var(--ink)}
+    .contact-item-sub{font-size:12px;font-weight:300;color:var(--muted);margin-top:3px}
+    footer{border-top:1px solid var(--border);padding:40px 56px;display:flex;align-items:center;justify-content:space-between;background:var(--off)}
+    .footer-left{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted)}
+    .footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+    .footer-right a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--gold);border-bottom:1px solid transparent;transition:border-color .2s}
+    .footer-right a:hover{border-color:var(--gold)}
+    .footer-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-left.visible{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(44px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+    .reveal-right.visible{opacity:1;transform:translateX(0)}
+    .reveal-d1{transition-delay:.12s}.reveal-d2{transition-delay:.24s}.reveal-d3{transition-delay:.36s}
+    @media(max-width:900px){
+      header{padding:0 24px}
+      nav{gap:20px}
+      .hero,.what,.team,.infra,.contact{padding:64px 24px}
+      .hero-body,.team-grid,.contact{grid-template-columns:1fr;gap:40px}
+      .what-cols{grid-template-columns:1fr}
+      .infra-grid{grid-template-columns:1fr 1fr}
+      footer{padding:32px 24px;flex-direction:column;gap:16px;align-items:flex-start}
+    }
+    @media(max-width:600px){
+      nav a:not(.nav-contact){display:none}
+      .infra-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo-diamond"><div class="logo-diamond-inner"></div></div>
+      <div class="logo-wordmark">Majestic <span>R&amp;D</span></div>
+    </a>
+    <nav>
+      <a href="index.html#products">Products</a>
+      <a href="aim.html">AIM</a>
+      <a href="peptides.html">Peptides</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#contact" class="nav-contact">Physician Inquiry &rarr;</a>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <div class="mq-wrap">
+      <div class="mq-track">
+        <span class="mq-item hi">Majestic R&amp;D, LLC</span>
+        <span class="mq-item">Maryland</span>
+        <span class="mq-item hi">Licensed Physicians Only</span>
+        <span class="mq-item">AIM Intranasal Delivery</span>
+        <span class="mq-item hi">GLP-1 Peptide Program</span>
+        <span class="mq-item">Third-Party Lab Verified</span>
+        <span class="mq-item hi">TrustPointe Analytics &middot; Chromate</span>
+        <span class="mq-item">Ships from South Carolina</span>
+        <span class="mq-item hi">PNC Healthcare Financing Available</span>
+        <span class="mq-item">Physician Supply &middot; Research Grade</span>
+        <span class="mq-item hi">Majestic R&amp;D, LLC</span>
+        <span class="mq-item">Maryland</span>
+        <span class="mq-item hi">Licensed Physicians Only</span>
+        <span class="mq-item">AIM Intranasal Delivery</span>
+        <span class="mq-item hi">GLP-1 Peptide Program</span>
+        <span class="mq-item">Third-Party Lab Verified</span>
+        <span class="mq-item hi">TrustPointe Analytics &middot; Chromate</span>
+        <span class="mq-item">Ships from South Carolina</span>
+        <span class="mq-item hi">PNC Healthcare Financing Available</span>
+        <span class="mq-item">Physician Supply &middot; Research Grade</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-eyebrow eyebrow reveal">About Majestic R&amp;D</div>
+      <h1 class="reveal">A physician supply company<br><em>built on technology that didn't exist yet.</em></h1>
+      <div class="hero-body">
+        <div class="hero-left reveal-left">
+          <p>
+            Majestic R&amp;D is a biotech and research company based in Maryland. We develop and
+            manufacture proprietary delivery technology and supply research-grade compounds to
+            licensed physicians and other customers &mdash; built on science developed outside the
+            standard pharmaceutical pipeline and validated by independent third-party laboratories.
+          </p>
+          <p>
+            Our current portfolio spans three areas: <strong>AIM Therapeutix</strong>, a proprietary
+            intranasal delivery platform we manufacture in-house at our laboratory on the UMBC campus;
+            a <strong>peptide program</strong> supplying semaglutide, tirzepatide, and retatrutide
+            to licensed physician practices through our partner <strong>Pro Peptide Solutions</strong>
+            in South Carolina; and a topical <strong>CBG formulation</strong> in development.
+          </p>
+          <p>
+            Every peptide lot is tested by TrustPointe Analytics and Chromate &mdash; independent
+            third-party laboratories. COAs include a QR code linking directly to the lab's own
+            verification portal. We do not ask physicians to take our word for purity or identity.
+          </p>
+        </div>
+        <div class="hero-right reveal-right">
+          <div class="fact-row">
+            <div class="fact-label">Entity</div>
+            <div class="fact-value"><strong>Majestic R&amp;D, LLC</strong> &mdash; Maryland</div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">Type</div>
+            <div class="fact-value">Biotech &amp; research company. Proprietary manufacturer (AIM) and research-grade supply partner (peptides).</div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">AIM Access</div>
+            <div class="fact-value">Licensed physicians and business partners. Manufactured in-house at UMBC campus laboratory.</div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">Peptides Access</div>
+            <div class="fact-value">Licensed physicians only. Sourced from Pro Peptide Solutions, South Carolina.</div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">QA / Testing</div>
+            <div class="fact-value">TrustPointe Analytics &amp; Chromate &mdash; independent third-party. COA QR codes link to lab portal directly.</div>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">Onboarding</div>
+            <div class="fact-value">15-minute intro call &middot; free practice economics analysis &middot; 2&ndash;3 weeks to fully operational.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE ARE — DARK -->
+    <section class="what reveal">
+      <div class="what-inner">
+        <div class="eyebrow light">What We Are &mdash; And What We Are Not</div>
+        <h2>We are a <em>biotech company.</em><br>The current products are the proof of concept.</h2>
+        <div class="what-cols">
+          <div class="what-col">
+            <p>
+              Majestic R&amp;D is not a compounding pharmacy, a clinical research organization,
+              or a standard distribution company. We are a <strong>biotech and research company</strong>
+              that develops proprietary technology, manufactures it in-house, and brings it to
+              market through multiple channels depending on the product.
+            </p>
+            <p>
+              AIM is available to licensed physicians and business partners &mdash; no
+              patient-direct supply at this time. Peptides are physician-access only under
+              RUO designation. CBG topical is in development. Each product operates under
+              its own access and compliance model.
+            </p>
+          </div>
+          <div class="what-col">
+            <p>
+              The technology we've built &mdash; specifically AIM &mdash; is not a sourced product.
+              It is a <strong>proprietary intranasal delivery platform manufactured in our own
+              laboratory</strong> on the UMBC campus, with a mechanism that targets CNS delivery
+              through a combination of principles most pharmaceutical engineers have not combined.
+            </p>
+            <p>
+              The physician supply program and direct channels are the current go-to-market. The
+              underlying asset is the intellectual property and manufacturing capability behind them.
+            </p>
+            <div class="what-tags">
+              <div class="what-tag">Proprietary Manufacturer</div>
+              <div class="what-tag">UMBC Campus Lab</div>
+              <div class="what-tag">AIM &mdash; Open Access</div>
+              <div class="what-tag">Peptides &mdash; Physician Only</div>
+              <div class="what-tag">Independent QA</div>
+              <div class="what-tag">Full Compliance Documentation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team reveal" id="team">
+      <div class="team-header">
+        <div class="eyebrow">The People</div>
+        <h2>The people <em>behind the program.</em></h2>
+        <p>Two people behind everything you see here. One built the technology, one runs the program. Between them, every question you have is covered.</p>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card reveal-left">
+          <div class="team-card-role">Founder &middot; Chief Science Officer</div>
+          <div class="team-card-name">Chris</div>
+          <div class="team-card-sub">U.S. Army Veteran &middot; Biotech Innovator</div>
+          <div class="team-card-divider"></div>
+          <p>
+            Chris is a <strong>former U.S. Army combat medic and healthcare specialist</strong>
+            who transitioned from operational military medicine into biotech innovation. His work
+            spans neurology, advanced therapeutic delivery systems, neurodegenerative recovery,
+            nanoscience, energy systems, and applied defense research &mdash; with a specific focus
+            on solving problems where conventional approaches have already been exhausted.
+          </p>
+          <p>
+            AIM is his primary development: a proprietary intranasal delivery platform targeting
+            CNS uptake through a mechanism that draws on principles across disciplines most
+            pharmaceutical engineers do not combine. The technology addresses the blood-brain
+            barrier problem from a direction the standard delivery literature has not pursued.
+          </p>
+          <p>
+            His clinical focus areas include <strong>TBI, PTSD sequelae, and neurodegenerative
+            decline</strong> &mdash; conditions with direct relevance to veteran and high-acuity
+            civilian populations, and conditions he has firsthand exposure to from his military service.
+          </p>
+          <div class="team-card-tags">
+            <div class="team-tag green">U.S. Army &middot; Combat Medic</div>
+            <div class="team-tag green">Healthcare Specialist</div>
+            <div class="team-tag">Neurology</div>
+            <div class="team-tag">CNS Delivery</div>
+            <div class="team-tag">Nanoscience</div>
+            <div class="team-tag">Defense Research</div>
+            <div class="team-tag">Neurodegenerative Recovery</div>
+          </div>
+          <div class="team-card-link">
+            <a href="https://content.blubrry.com/irreverent_health/IH-112.mp3" target="_blank" rel="noopener">
+              Listen: Irreverent Health &mdash; Episode 112 &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card reveal-right">
+          <div class="team-card-role">Chief Executive Officer</div>
+          <div class="team-card-name">Preet Patel</div>
+          <div class="team-card-sub">Operations &middot; Physician Relations &middot; Program Onboarding</div>
+          <div class="team-card-divider"></div>
+          <p>
+            Preet is the primary contact for every physician inquiry at Majestic R&amp;D.
+            Practice economics, program onboarding, AIM ordering, compound questions,
+            compliance documentation — all of it runs through him directly.
+          </p>
+          <p>
+            His background is in business and operations, with prior experience in real estate
+            and the hemp industry. That last one matters: he spent years navigating the
+            regulatory and supply chain realities of <strong>bringing non-standard compounds
+            to licensed practitioners</strong> — which is exactly what Majestic R&amp;D does.
+          </p>
+          <p>
+            If you have a question about whether this fits your practice, what the economics
+            look like, or what the onboarding process involves — Preet is who you talk to.
+            Response within one business day.
+          </p>
+          <div class="team-card-tags">
+            <div class="team-tag">Physician Relations</div>
+            <div class="team-tag">Program Onboarding</div>
+            <div class="team-tag">Practice Economics</div>
+            <div class="team-tag">Operations</div>
+            <div class="team-tag">Compliance Documentation</div>
+            <div class="team-tag">Hemp Industry</div>
+          </div>
+          <div class="team-card-link">
+            <a href="mailto:majesticrdinfo@gmail.com?subject=Physician%20Inquiry%20%E2%80%94%20Majestic%20R%26D">
+              Contact Preet directly &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact reveal" id="contact">
+      <div class="contact-left">
+        <div class="eyebrow">Physician Inquiries</div>
+        <h2>15 minutes. <em>Free practice analysis. No commitment.</em></h2>
+        <p>All products supplied to licensed physicians only. Contact Preet directly for AIM ordering, peptide program onboarding, or to request the full citation reference document for any compound.</p>
+        <div class="contact-btns">
+          <a href="https://calendar.app.google/6EGJTqmVUwbgjVyf6" target="_blank" rel="noopener" class="btn-primary">Schedule Intro Call &rarr;</a>
+          <a href="mailto:majesticrdinfo@gmail.com?subject=Physician%20Inquiry%20%E2%80%94%20Majestic%20R%26D&body=Name%3A%0APractice%20/%20Clinic%3A%0A%0AI%20am%20inquiring%20about%3A%0A%5B%20%5D%20AIM%20Therapeutix%0A%5B%20%5D%20Peptide%20Program%0A%5B%20%5D%20CBG%20Topical%0A%5B%20%5D%20General%20information%0A%0ANotes%3A%0A" class="btn-secondary">Email Preet &rarr;</a>
+        </div>
+      </div>
+      <div class="contact-right reveal-right">
+        <div class="contact-item">
+          <div class="contact-item-label">AIM &mdash; Delivery Technology</div>
+          <div class="contact-item-value">Order inquiry &middot; Clinical workflow &middot; Citation documents</div>
+          <div class="contact-item-sub">50 mL vial $500 &middot; 2&times;50 mL $900 &middot; Licensed physician verification required</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">Peptide Program &mdash; GLP-1</div>
+          <div class="contact-item-value">Intro call &middot; Free practice analysis &middot; Onboarding</div>
+          <div class="contact-item-sub">Semaglutide &middot; Tirzepatide &middot; Retatrutide &middot; PNC Healthcare financing available</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">CBG &mdash; Topical</div>
+          <div class="contact-item-value">Coming soon &mdash; contact for timeline</div>
+          <div class="contact-item-sub">Physician-grade topical cannabigerol &middot; Details in development</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">Direct Contact</div>
+          <div class="contact-item-value">majesticrdinfo@gmail.com</div>
+          <div class="contact-item-sub">Preet Patel, CEO &middot; All physician inquiries</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">&copy; 2026 Majestic R&amp;D, LLC. All rights reserved. Maryland.</div>
+    <div class="footer-right">
+      <a href="mailto:majesticrdinfo@gmail.com">majesticrdinfo@gmail.com</a>
+      <div class="footer-note">Licensed Physician Access Only</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.22,rootMargin:'0px 0px -160px 0px'});
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+    })();
+  </script>
+
+</body>
+</html>
